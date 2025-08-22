@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="template" client="site" method="upgrade">
+	<name>osrthorizon</name>
+	<version>4.00</version>
+	<creationDate>Aug 2025</creationDate>
+	<author>Allen Shaw</author>
+	<authorEmail>allen@joineryhq.com</authorEmail>
+	<copyright>(C) 2025</copyright>
+	<description>Custom Joomla 4 template for OSRT</description>
+	<inheritable>1</inheritable>
+	<scriptfile>script.php</scriptfile>
+	<files>
+		<filename>index.php</filename>
+		<filename>joomla.asset.json</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>html</folder>
+	</files>
+	<media destination="templates/site/osrthorizon" folder="media">
+		<folder>js</folder>
+		<folder>css</folder>
+		<folder>scss</folder>
+		<folder>images</folder>
+	</media>
+	<positions>
+      <joinery-comment>
+      # Unused by modules: position-2, position-8, banner, debug
+      # Not actually generated anywhere by template: position-6, position-12, position-13, position-14, position-15
+      # Special treatment: position-10
+      # This means we actually must support the following:
+        postion-0: user login, pre-header menu, rssocial icons
+        postion-1: main navigation menu
+        postion-3: "Welcome to OSRT" (homepage only)
+        postion-4: 
+          - "Home: About" ("The OSRT promotes clinical excellence in radiologic technology ...") (homepage only)
+          - "Tangram_prof_block_menu"("audience blocks" menu) (homepage only)
+        postion-5: News; More News
+        postion-7: 
+          - "memberships" (homepage only)
+          - "recognitions" (homepage only)
+        component: NOT A POSITION. Appears between position-7 and position-9; contains what you might call "the page content".
+        postion-9: 
+          - "Banners - Home" (advertisements, all pages)
+        postion-10:
+          - Calendar (only on "About Us")
+          - Contact us (only on "About Us")        
+        postion-11: user menus: "members" and "bod"
+        footer:
+          - rssocial footer
+          - ASRT Proud Affiliate
+        footer-2: (various footer menus)
+
+      </joinery-comment>
+		<position>position-0</position>
+		<position>header</position>
+		<position>footer</position>
+		<position>sidebar</position>
+		<position>search</position>
+		<position>breadcrumbs</position>
+		<position>menu</position>
+		<position>content-top</position>
+	</positions>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field
+					name="testparam"
+					type="radio"
+					label="Test Parameter Yes/No - This option does nothing by default"
+					default="1"
+					layout="joomla.form.field.radio.switcher"
+					filter="boolean"
+					>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
