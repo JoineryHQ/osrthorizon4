@@ -18,6 +18,8 @@ use Joomla\CMS\Uri\Uri; // Uri class: Contains static methods to manipulate URIs
 
 /** @var Joomla\CMS\Document\HtmlDocument $this */
 
+if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- osrthorizon/index.php -->';}
+
 $app = Factory::getApplication();
 $wa  = $this->getWebAssetManager();  // Get the Web Asset Manager - used to load our CSS and JS files
 
@@ -38,7 +40,6 @@ $pageclass = $menu !== null ? $menu->getParams()->get('pageclass_sfx', '') : '';
 //Get params from template styling
 //If you want to add your own parameters you may do so in templateDetails.xml
 $testparam =  $this->params->get('testparam');
-
 //uncomment to see how this works on site... it just shows 1 or 0 depending on option selected in style config.
 //You can use this style to get/set any param according to instructions at https://kevinsguides.com/guides/webdev/joomla4/joomla-4-templates/adding-config
 //echo('the value of testparam is: '.$testparam);
@@ -58,9 +59,9 @@ HTMLHelper::_('bootstrap.dropdown');
 
 //Register our web assets (Css/JS) with the Web Asset Manager
 //The files are defined in joomla.asset.json!!! If you don't want to use the included CSS or JS, just remove these lines or replace the CSS/JS files with your own code!
-$wa->useStyle('template.osrthorizon.mainstyles');
-$wa->useStyle('template.osrthorizon.user');
-$wa->useScript('template.osrthorizon.scripts');
+$wa->useStyle('template.osrthorizon.template.css');
+$wa->useStyle('template.osrthorizon.user.css');
+$wa->useScript('template.osrthorizon.template.js');
 
 //Set viewport meta tag for mobile responsiveness -- very important for scaling on mobile devices
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
