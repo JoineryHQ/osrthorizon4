@@ -22,6 +22,12 @@
       "uri": "user.css"
     },
     {
+      "name": "template.osrthorizon.fonts.css",
+      "description": "Fonts",
+      "type": "style",
+      "uri": "fonts.css"
+    },
+    {
       "name": "template.osrthorizon.template.js",
       "description": "The file containing the javascript for this template.",
       "type": "script",

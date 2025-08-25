@@ -56,7 +56,7 @@ $templatePath = 'templates/' . $this->template;
 //this loads collapse.min.js from media/vendor/bootstrap/js - you can check out that folder to see what other bootstrap js files are available if you need them
 //HTMLHelper::_('bootstrap.collapse');
 //dropdown needed for 2nd level menu items
-HTMLHelper::_('bootstrap.dropdown');
+//HTMLHelper::_('bootstrap.dropdown');
 //You could also load all of bootstrap js with this line, but it's not recommended because it's a lot of extra code that you probably don't need
 //HTMLHelper::_('bootstrap.framework');
 
@@ -65,6 +65,7 @@ HTMLHelper::_('bootstrap.dropdown');
 //The files are defined in joomla.asset.json!!! If you don't want to use the included CSS or JS, just remove these lines or replace the CSS/JS files with your own code!
 $wa->useStyle('template.osrthorizon.template.css');
 $wa->useStyle('template.osrthorizon.user.css');
+$wa->useStyle('template.osrthorizon.fonts.css');
 $wa->useScript('template.osrthorizon.template.js');
 
 /* ******** fixme: osrthorizon: additional js and css files START
@@ -75,12 +76,13 @@ JHtml::_('script', 'custom.js', array('version' => 'auto', 'relative' => true));
 JHtml::_('stylesheet', 'style.css', array('version' => 'auto', 'relative' => true));
 ******** fixme: osrthorizon: additional js and css files END */
 
-/* ******** fixme: osrthorizon: adjust witdh based on position content START
-// Adjusting content width
 $position7ModuleCount = $this->countModules('position-7');
 $position8ModuleCount = $this->countModules('position-8');
 $position9ModuleCount = $this->countModules('position-9');
 $position11ModuleCount = $this->countModules('position-11');
+
+/* ******** fixme: osrthorizon: adjust witdh based on position content START
+// Adjusting content width
 
 if ($position7ModuleCount && $position8ModuleCount)
 {
@@ -103,7 +105,7 @@ else
 $logo = HTMLHelper::_('image', 'logo-header.png', $sitename, [], true, 0);
 
 //Set viewport meta tag for mobile responsiveness -- very important for scaling on mobile devices
-$this->setMetaData('viewport', 'width=device-width, initial-scale=1');
+$this->setMetaData('viewport', 'width=device-width, initial-scale=1.0');
 
 ?>
 
@@ -189,16 +191,19 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
   <?php if ($this->countModules('position-1')) : ?>
     <nav class="navigation" role="navigation">
         <div class="navigation-block">
-            <!-- position-1 START --><jdoc:include type="modules" name="position-1" style="none" /><!-- position-1 END -->
-            <?php if ($position11ModuleCount) : ?>
-              <div class="menu-optional-wrapper">
-                <div class="menu-optional">
-                    <!-- position-11 START --><jdoc:include type="modules" name="position-11" style="none" /><!-- position-11 END -->
-                </div>
-              </div>
-            <?php endif; ?>
+            <!-- position-1 START --><jdoc:include type="modules" name="position-1" style="xhtml" /><!-- position-1 END -->
         </div>
     </nav>
+  <?php endif; ?>
+  <?php if ($position11ModuleCount) : ?>
+    <div class="menu-optional-wrapper">
+      <div class="menu-optional">
+          <!-- position-11 START -->
+          <?php // Note it's critical to use style='html5' here, so that module titles will display if so configured. ?>
+          <jdoc:include type="modules" name="position-11" style="html5" />
+          <!-- position-11 END -->
+      </div>
+    </div>
   <?php endif; ?>
   <!-- position-3 START --><jdoc:include type="modules" name="position-3" style="none" /><!-- position-3 END -->
   <!-- position-4 START --><jdoc:include type="modules" name="position-4" style="xhtml" /><!-- position-4 END -->
