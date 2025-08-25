@@ -67,6 +67,8 @@ $wa->useStyle('template.osrthorizon.template.css');
 $wa->useStyle('template.osrthorizon.user.css');
 $wa->useStyle('template.osrthorizon.fonts.css');
 $wa->useScript('template.osrthorizon.template.js');
+$wa->useScript('template.osrthorizon.scrollspy.js');
+$wa->useScript('template.osrthorizon.swiper.js');
 
 /* ******** fixme: osrthorizon: additional js and css files START
 JHtml::_('script', 'scrollspy.min.js', array('version' => 'auto', 'relative' => true));
@@ -161,6 +163,9 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1.0');
             <!-- position-0 START --><jdoc:include type="modules" name="position-0" style="none" /><!-- position-0 END -->
         </div>
         <?php echo HTMLHelper::_('image', 'header-line.png', '', ['class'=>'header-img'], true, 0); ?>
+        <button class="burger">
+            <div><span></span></div>
+        </button>
     </div>      
     
     <?php
@@ -190,20 +195,20 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1.0');
   </header>
   <?php if ($this->countModules('position-1')) : ?>
     <nav class="navigation" role="navigation">
-        <div class="navigation-block">
+        <div class="position-1">
             <!-- position-1 START --><jdoc:include type="modules" name="position-1" style="xhtml" /><!-- position-1 END -->
         </div>
+      <?php if ($position11ModuleCount) : ?>
+        <div class="position-11-wrapper">
+          <div class="position-11">
+              <!-- position-11 START -->
+              <?php // Note it's critical to use style='html5' here, so that module titles will display if so configured. ?>
+              <jdoc:include type="modules" name="position-11" style="html5" />
+              <!-- position-11 END -->
+          </div>
+        </div>
+      <?php endif; ?>
     </nav>
-  <?php endif; ?>
-  <?php if ($position11ModuleCount) : ?>
-    <div class="menu-optional-wrapper">
-      <div class="menu-optional">
-          <!-- position-11 START -->
-          <?php // Note it's critical to use style='html5' here, so that module titles will display if so configured. ?>
-          <jdoc:include type="modules" name="position-11" style="html5" />
-          <!-- position-11 END -->
-      </div>
-    </div>
   <?php endif; ?>
   <!-- position-3 START --><jdoc:include type="modules" name="position-3" style="none" /><!-- position-3 END -->
   <!-- position-4 START --><jdoc:include type="modules" name="position-4" style="xhtml" /><!-- position-4 END -->
@@ -231,6 +236,9 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1.0');
     <!-- position-9 START --><jdoc:include type="modules" name="position-9" style="none" /><!-- position-9 END -->
     <div class="clearfix"></div>
 
+    <div class="container">
+        <div class="main-content__top top_header">Back to Top</div>
+    </div>
     <?php // Load Footer ?>
     <footer class="footer mt-auto py-3 bg-light ">
         <div class="wrapper">

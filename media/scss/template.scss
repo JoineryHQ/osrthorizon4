@@ -7,9 +7,10 @@
 @import "vendor/bootstrap-5.3.2/bootstrap";
 
 // Import this file to make columns work in com_content
-@import "_modifiers";
+@import "_modifiers"; // OSRTHORIZON-FIXME: IS _modifiers EVEN NEEDED?
 @import "_variables";
 @import "_menu";
+@import "_header";
 
 //Your Imports Here
 

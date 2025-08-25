@@ -1,0 +1,71 @@
+.burger{
+  display: block;
+  background: transparent;
+  border: none;
+  order: 2;
+  align-self: flex-end;
+}
+
+.burger div {
+  width: 32px;
+  height: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  margin: 10px 50px 0 34px
+}
+
+.burger div span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 2px;
+  display: inline-block;
+  background-color: #fff;
+}
+
+.burger div::before, .burger div::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+.burger div::after {
+  top: auto;
+  bottom: 0;
+}
+
+@include media-breakpoint-up(md) {
+  .burger {
+    display: none;
+  }
+}
+
+/*
+
+.burger.active div{
+  transform: rotate(45deg);
+}
+
+.burger.active div:before{
+  transform: rotate(90deg);
+  top: 8px;
+}
+
+.burger.active div:after{
+  display: none;
+}
+
+.burger.active {
+  z-index: 9999;
+  position: fixed;
+  top: 25px;
+}
+
+*/

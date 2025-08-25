@@ -40,6 +40,30 @@
       ]
     },
     {
+      "name": "template.osrthorizon.scrollspy.js",
+      "description": "Scrollspy js",
+      "type": "script",
+      "uri": "scrollspy.min.js",
+      "attributes" : {
+        "defer": true
+      },
+      "dependencies": [
+        "core"
+      ]
+    },
+    {
+      "name": "template.osrthorizon.swiper.js",
+      "description": "Swiper js",
+      "type": "script",
+      "uri": "swiperswiper-bundle.min.js",
+      "attributes" : {
+        "defer": true
+      },
+      "dependencies": [
+        "core"
+      ]
+    },
+    {
       "name": "template.active",
       "description": "A dummy asset to allow extensions to use it as a dependency to the active template.",
       "type": "script",

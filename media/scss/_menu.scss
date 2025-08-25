@@ -1,32 +1,101 @@
-nav.navigation {
-  margin: 0 auto;
-  text-align: center;
-  background: #fff;
-  width:100%;
-  position: relative;
-  ul.navbar-nav {
-    width: 100%;
-    display: table;
-    vertical-align: top;
-    background:#E6E6E6;
-    
-    li {
-      display: table-cell;
-      border: 4px solid #fff;
-      border-left: 0;
-      cursor: pointer;
-      /* transition: all .3s ease-in-out; */      
+.navigation{
+  display: none;
+}
+body.hamburger-active{
+  overflow: hidden;
+  .navigation{
+    display: block;
+  }
+}
+.burger.active div{
+  transform: rotate(45deg);
+}
+.burger.active div:before{
+  transform: rotate(90deg);
+  top: 8px;
+}
+.burger.active div:after{
+  display: none;
+}
+.burger.active {
+  z-index: 9999;
+  position: fixed;
+  top: 25px;
+  right: -5px;
+}
+
+.navigation{
+  z-index: 9998;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  overflow-y: auto;
+  padding: 30px;
+
+  ul.navbar-nav li {
+    display: block;
+    border: unset;
+    min-width: 20em;
+    text-align: left;
+    a {
+      color: $white-color;
+      font-size: 26px;
+      font-weight: 400;
+      padding: 7px;
+      line-height: normal;
+      transition-duration: 0s;
     }
-    li:last-of-type {
-        border-right: 0;
+    a.dropdown-toggle::after {
+      // Hide drop-down controls on menu items
+      display: none;
     }
-    li.active{
-      background-color: $gray-color-menu;
-      a{
-        color:$white-color;
+  }
+  .position-11 .moduletable {
+    h3 {
+      color: $white-color;
+      font-size: 26px;
+      font-weight: 400;
+      max-width: 100%;
+
+    }
+    ul {
+      margin-left: 30px;
+      a {
+        font-size: 16px;
+        font-family: 'DIN2014', sans-serif;
+        color: #fff;
+        padding: 0;
+        font-weight: 400;
+        text-align: left;
+      }
+      a:hover {
+        background-color: $gray-color;
       }
     }
-    
+  }
+  .position-11::before {
+    content: '';
+    top: -23px;
+    left: 0;
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: $white-color;
+    position: relative;
+    max-width: 35em;
+  }
+
+  .position-1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: transparent;
+    padding-bottom: 25px;
+
     .current.active .professional,
     a.professional:hover {
       background-color: $orange-color !important;
@@ -47,127 +116,123 @@ nav.navigation {
       background-color: $yellow-color !important;
     }
 
-    a {
-      font-family: 'DIN2014', sans-serif;
-      font-weight: 700;
-      display: block;
-      font-size: 28px;
-      padding: 15px 7px;
-      color: $dark-color;
-      /* FULL-HEIGHT NAV MENU: important for bg-color on hover. */
-      height: 100%;
-    }
-    
     a:hover,
      .current.active a {
       background-color: $gray-color;
     }
-    
-    a.dropdown-toggle::after {
-      // Hide drop-down controls on menu items
+
+  }
+}
+
+
+@include media-breakpoint-up(md) {
+  .navigation {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+    width:100%;
+    padding: 0px;
+    position: relative;
+    .position-1 {
+      padding: 0px;
+      ul.navbar-nav {
+        width: 100%;
+        display: table;
+        vertical-align: top;
+        background:#E6E6E6;
+        li {
+          display: table-cell;
+          border: 4px solid #fff;
+          border-left: 0;
+          cursor: pointer;
+          min-width: revert;
+          // hack/quirk: setting height on the li is somehow necessary to allows
+          // the containd <a> to fill all vertical space with "height: 100%";
+          // since li,display is table-cell, this height is not actually applied
+          // to the li.
+          height: 1px;
+          a {
+            font-family: 'DIN2014', sans-serif;
+            font-weight: 700;
+            display: block;
+            font-size: 28px;
+            padding: 15px 7px;
+            color: $dark-color;
+            /* FULL-HEIGHT NAV MENU: important for bg-color on hover. */
+            height: 100%;
+            text-align: center;
+          }
+        }
+        li:last-of-type {
+            border-right: 0;
+        }
+        li.active{
+          background-color: $gray-color-menu;
+          a{
+            color:$white-color;
+          }
+        }
+      }
+    }
+
+    /* Styles for position-11 (which is placed inside div.position-11-wrapper)
+     * These are the user menus such as "Members" and "Board of Directors"
+     */
+    .position-11-wrapper {
+      color: $white-color;
+      background: #333;
+      text-align: right;
+      /* The style for "FULL-HEIGHT NAV MENU" above causes the members and BoD menus
+       * to mis-align. Remove relevant stylings for those menus.
+       */
+      ul {
+        height: auto;
+      }
+    }
+    .position-11 {
+      display: inline-flex;
+      justify-content: flex-end;
+      position: relative;
+      right: 0;
+      top: 100%;
+      z-index: 2;
+      min-height: 110px;
+
+      .moduletable{
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        padding: 15px 30px 15px 45px;
+        min-width: 450px;
+        h3{
+          font-weight: 700;
+          color: $white-color;
+          font-size: 31px;
+          max-width: 125px;
+          text-align: right;
+        }
+        ul{
+          width: unset;
+          display: flex;
+          flex-direction: column;
+          vertical-align: unset;
+          background: transparent;
+          margin-left: 30px;
+        }
+      }
+      .moduletable:last-of-type {
+        margin-left: 7px;
+      }
+    }
+    .position-11::before {
       display: none;
     }
-  } 
-}
 
 
-/* Styles for position-11 (which is placed inside div.menu-optional-wrapper)
- * These are the user menus such as "Members" and "Board of Directors"
- */
-div.menu-optional-wrapper {
-  color: $white-color;
-  background: #333;
-  text-align: right;
-  /* The style for "FULL-HEIGHT NAV MENU" above causes the members and BoD menus
-   * to mis-align. Remove relevant stylings for those menus.
-   */
-  ul {
-    /*height: auto;*/
+
+
   }
-  a {
-    font-size: 16px;
-    font-family: 'DIN2014', sans-serif;
-    color: #fff;
-    padding: 0;
-    font-weight: 400;
-    text-align: left;
-  }
-  a:hover {
-    background-color: $gray-color;
-  }
+
+
 }
-.menu-optional{
-  display: inline-flex;
-  justify-content: flex-end;
-  position: relative;
-  right: 0;
-  top: 100%;
-  z-index: 2;
-  min-height: 110px;
-
-  .moduletable{
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    padding: 15px 30px 15px 45px;
-    min-width: 450px;
-    h3{
-      font-weight: 700;
-      color: $white-color;
-      font-size: 31px;
-      max-width: 125px;
-      text-align: right;
-    }
-    ul{
-      width: unset;
-      display: flex;
-      flex-direction: column;
-      vertical-align: unset;
-      background: transparent;
-      margin-left: 30px;
-    }
-    
-  }
-}
-
-
-.menu-optional__block div{
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-
-.menu-optional__block-last{
-  margin-left: 7px;
-}
-
-
-
-/*
-.navigation .menu-optional__block  li{
-  display: block;
-  border: none;
-}
-
-
-.burger.active div{
-  transform: rotate(45deg);
-}
-
-.burger.active div:before{
-  transform: rotate(90deg);
-  top: 8px;
-}
-
-.burger.active div:after{
-  display: none;
-}
-
-.burger.active {
-  z-index: 9999;
-  position: fixed;
-  top: 25px;
-}
-
-*/
