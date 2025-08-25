@@ -150,7 +150,7 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1.0');
   <header class="header">
     <div class="header__left">
 				<div class="header-inner clearfix">
-					<a class="brand pull-left" href="<?php echo $this->baseurl; ?>/">
+					<a class="brand" href="<?php echo $this->baseurl; ?>/">
 						<?php echo $logo; ?>
 						<?php if ($this->params->get('sitedescription')) : ?>
 							<?php echo '<div class="site-description">' . htmlspecialchars($this->params->get('sitedescription'), ENT_COMPAT, 'UTF-8') . '</div>'; ?>
@@ -159,7 +159,7 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1.0');
 				</div>
     </div>      
     <div class="header__right-bottom">
-        <div class="header-search pull-right">
+        <div class="j3-header-search position-0">
             <!-- position-0 START --><jdoc:include type="modules" name="position-0" style="none" /><!-- position-0 END -->
         </div>
         <?php echo HTMLHelper::_('image', 'header-line.png', '', ['class'=>'header-img'], true, 0); ?>
