@@ -54,7 +54,7 @@ $templatePath = 'templates/' . $this->template;
 
 //load bootstrap collapse js (required for mobile menu to work)
 //this loads collapse.min.js from media/vendor/bootstrap/js - you can check out that folder to see what other bootstrap js files are available if you need them
-HTMLHelper::_('bootstrap.collapse');
+//HTMLHelper::_('bootstrap.collapse');
 //dropdown needed for 2nd level menu items
 HTMLHelper::_('bootstrap.dropdown');
 //You could also load all of bootstrap js with this line, but it's not recommended because it's a lot of extra code that you probably don't need
@@ -100,11 +100,7 @@ else
 }
 ******** fixme: osrthorizon: adjust witdh based on position content END */
 
-/* ******** fixme: osrthorizon: logo file START
-// Logo file or site title param
-$logo = '<img src="' . htmlspecialchars(JUri::root() . 'templates/osrthorizon/images/logo-header.png', ENT_QUOTES) . '" alt="' . $sitename . '" />';
-******** fixme: osrthorizon: logo file END */
-
+$logo = HTMLHelper::_('image', 'logo-header.png', $sitename, [], true, 0);
 
 //Set viewport meta tag for mobile responsiveness -- very important for scaling on mobile devices
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
@@ -162,7 +158,7 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
         <div class="header-search pull-right">
             <!-- position-0 START --><jdoc:include type="modules" name="position-0" style="none" /><!-- position-0 END -->
         </div>
-        <img class="header-img" src="/templates/osrthorizon/images/header-line.png" alt="">
+        <?php echo HTMLHelper::_('image', 'header-line.png', '', ['class'=>'header-img'], true, 0); ?>
     </div>      
     
     <?php
@@ -234,7 +230,7 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
     <footer class="footer mt-auto py-3 bg-light ">
         <div class="wrapper">
             <div class="footer-block">
-                <img src="/templates/osrthorizon/images/footer-line.png" alt="">
+                <?php echo HTMLHelper::_('image', 'footer-line.png', '', [], true, 0); ?>
             </div>
             <div class="footer-main">
                 <?php echo $logo; ?>
