@@ -70,7 +70,7 @@ elseif ($item->browserNav == 2)
 	$attributes['onclick'] = "window.open(this.href, 'targetWindow', '" . $options . "'); return false;";
 }
 
-$attributes['class'] = 'nav-link';
+$attributes['class'] .= ' nav-link';
 
 if($item->parent)
 {
