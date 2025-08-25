@@ -134,6 +134,9 @@ body.hamburger-active{
     width:100%;
     padding: 0px;
     position: relative;
+    ul.navbar-nav li {
+      min-width: revert;
+    }
     .position-1 {
       padding: 0px;
       ul.navbar-nav {
@@ -146,7 +149,6 @@ body.hamburger-active{
           border: 4px solid #fff;
           border-left: 0;
           cursor: pointer;
-          min-width: revert;
           // hack/quirk: setting height on the li is somehow necessary to allows
           // the containd <a> to fill all vertical space with "height: 100%";
           // since li,display is table-cell, this height is not actually applied
@@ -156,7 +158,7 @@ body.hamburger-active{
             font-family: 'DIN2014', sans-serif;
             font-weight: 700;
             display: block;
-            font-size: 28px;
+            font-size: 20px;
             padding: 15px 7px;
             color: $dark-color;
             /* FULL-HEIGHT NAV MENU: important for bg-color on hover. */
@@ -204,11 +206,11 @@ body.hamburger-active{
         align-items: center;
         flex-grow: 1;
         padding: 15px 30px 15px 45px;
-        min-width: 450px;
+        /*min-width: 450px;*/
         h3{
           font-weight: 700;
           color: $white-color;
-          font-size: 31px;
+          font-size: 20px;
           max-width: 125px;
           text-align: right;
         }
@@ -228,11 +230,48 @@ body.hamburger-active{
     .position-11::before {
       display: none;
     }
-
-
-
-
   }
+}
 
+@include media-breakpoint-up(xl) {
+  .navigation {
+    .position-1 {
+      ul.navbar-nav {
+        li {
+          a {
+            font-size: 24px;
+          }
+        }
+      }
+    }
 
+    .position-11 {
+      .moduletable{
+        h3{
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xxl) {
+  .navigation {
+    .position-1 {
+      ul.navbar-nav {
+        li {
+          a {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+
+    .position-11 {
+      .moduletable{
+        h3{
+          font-size: 31px;
+        }
+      }
+    }
+  }
 }
