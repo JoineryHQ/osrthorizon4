@@ -58,6 +58,8 @@ for i in $MYDIR/*; do
     || "$i" == "$MYDIR/media" 
     || "$i" == "$MYDIR/deploy.sh" 
     || "$i" == "$MYDIR/package.sh" 
+    || "$i" == "$MYDIR/.git"
+    || "$i" == "$MYDIR/nbproject" 
   ]]; then
     continue;
   fi;
