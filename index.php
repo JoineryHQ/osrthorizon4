@@ -162,11 +162,10 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1.0');
         <div class="j3-header-search position-0">
             <!-- position-0 START --><jdoc:include type="modules" name="position-0" style="none" /><!-- position-0 END -->
         </div>
-        <?php echo HTMLHelper::_('image', 'header-line.png', '', ['class'=>'header-img'], true, 0); ?>
         <button class="burger">
             <div><span></span></div>
         </button>
-    </div>      
+    </div>
     
     <?php
     /* ******************** joomstarter: top-bar START

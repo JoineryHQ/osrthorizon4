@@ -1,4 +1,12 @@
 header.header {
+  background: $header-bg url(/media/templates/site/osrthorizon/images/header-line.png) no-repeat;
+  background-position-x: 112px;
+  background-position-y: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  
   .burger {
     display: block;
     background: transparent;
@@ -11,8 +19,10 @@ header.header {
       cursor: pointer;
       background-color: transparent;
       border: none;
-      position: relative;
-      margin: 10px 50px 0 34px
+      position: absolute;
+      margin: 0;
+      top: 70px;
+      right: 54px;
     }
     div span {
       position: absolute;
@@ -40,40 +50,48 @@ header.header {
   }
   
   .header__left {
-      padding: 20px 0 20px 15px;
+      padding: 20px 20px 20px 15px;
   }
   .brand img, .footer-main img {
     width: 130px;
     height: auto;
     margin-bottom: 7px;
+    max-width: none;
   }
   .position-0 {
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
 
     // Search button:
     #preheadermenu {
       margin-right: 1em;
-      li a {
-        font-family: 'DIN2014-Demi', sans-serif;
-        display: inline-block;
-        padding: 5px 13px 3px;
-        background-color: $white-color;
-        border-radius: 0 0 15px 15px;
-        font-size: 30px;
-        color: $orange-color;
-        width: 140px !important;
-        box-shadow: none !important;
-        height: 50px !important;
-        text-align: center;
-        margin: 0 !important;      
+      li {
+        line-height: normal;
+        a {
+          font-family: 'DIN2014-Demi', sans-serif;
+          display: inline-block;
+          padding: 5px 13px 3px;
+          background-color: $white-color;
+          border-radius: 0 0 15px 15px;
+          font-size: 30px;
+          color: $orange-color;
+          width: 140px !important;
+          box-shadow: none !important;
+          height: 50px !important;
+          text-align: center;
+          margin: 0 !important;      
+        }
       }
     }
     
     // social icons:
     div.rssocial-container {
         margin: 0;
-        margin-right: 1em;
+        margin-right: 150px;
+        text-align: right;
+        width: 100%;
+        order: 3;        
     }
 
     // "jtl login" login button
@@ -94,25 +112,43 @@ header.header {
       box-shadow: none !important;
       height: 50px !important;
       text-align: center;
-      margin: 0 !important;      
+      margin: 0 !important;
     }
     
   }
 
   // "lines" image
   img.header-img {
-      transform: translateY(100px);
   }
   
   @include media-breakpoint-up(md) {
+    background-position-x: right;
+
     .burger {
       display: none;
     }
+    .position-0 {    
+      // social icons:
+      div.rssocial-container {
+        margin-right: 1em;
+        width: unset;
+        order: unset;
+      }
+    }
   }
   @include media-breakpoint-up(xl) {
+    background-position-y: 160px;
     .brand img, .footer-main img {
       width: initial;
     }
+
+    // "lines" image
+    img.header-img {
+      position: absolute;
+      top: 160px;
+      right: 0;      
+    }
+      
   }
 
 }

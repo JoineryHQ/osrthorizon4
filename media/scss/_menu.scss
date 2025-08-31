@@ -8,8 +8,8 @@ body.hamburger-active{
   }
 }
 // .burger.active is the hamburger icon when the mobile menu is displayed.
-// For stylings on burger(WRT .active), see _header.scss.
-.burger.active {
+// For stylings on burger(regardless of .active), see _header.scss.
+header.header .burger.active {
   display: block;
   z-index: 9999;
   position: fixed;
@@ -17,6 +17,8 @@ body.hamburger-active{
   right: -5px;
   div{
     transform: rotate(45deg);
+    top: 10px;
+    right: 30px;
   }
   div:before{
     transform: rotate(90deg);

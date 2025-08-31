@@ -1,0 +1,130 @@
+.blog.content-category-custom {
+  .page-header {
+    position: relative;
+    .subheading-category {
+      position: absolute;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 160px;
+      max-width: 975px;
+      top: 160px;
+      bottom: 20px;
+      left: 36px;
+      z-index: 1;
+      color: #fff;      
+/*    line-height: 160px;
+    bottom: 20px;
+    left: 36px;*/
+    }
+    .page-header-image {
+      height: 300px;
+      img {
+        height: 300px;
+        display: block;
+        width: 100%;
+        object-fit: cover;
+      }
+    }    
+    h2 {
+      margin: 0px;
+    }
+  }
+  .page-header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: $darkening-overlay-color;
+  }
+
+  
+}
+
+.blog.blog-proffesionals .category-desc p:first-of-type {
+  color: $orange-color;  
+}
+.blog.blog-advocacy .category-desc p:first-of-type {
+  color: $green-color;  
+}
+.blog.blog-education .category-desc p:first-of-type {
+  color: $blue-color;  
+}
+.blog.blog-foundation .category-desc p:first-of-type {
+  color: $yellow-color;  
+}
+.blog.blog-proffesionals .page-header::after{
+    background-color: rgba(247, 147, 30, 0.5);
+}
+
+.blog.blog-foundation .page-header::after{
+    background-color: rgba(224, 204, 0, 0.5);
+}
+
+.blog.blog-foundation .page-header::after{
+    background-color: rgba(224, 204, 0, 0.5);
+}
+
+.blog.blog-advocacy .page-header::after {
+    background-color: rgba(106, 191, 75, 0.5);
+}
+
+.blog.blog-education .page-header::after {
+    background-color: rgba(60, 180, 229, 0.5);
+}
+
+
+@include media-breakpoint-up(md) {
+  .blog.content-category-custom {
+    .page-header {
+      .subheading-category {
+        top: 260px;
+        font-size: 60px;
+        line-height: 60px;
+      }
+      .page-header-image {
+        height: 350px;
+        img {
+          height: 350px;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .blog.content-category-custom {
+    .page-header {
+      .subheading-category {
+        top: 310px;
+        font-size: 100px;
+        line-height: 100px;
+      }
+      .page-header-image {
+        height: 450px;
+        img {
+          height: 450px;
+        }
+      }
+    }
+  }
+
+
+}
+@include media-breakpoint-up(xxl) {
+  .blog.content-category-custom {
+    .page-header {
+      .subheading-category {
+        top: 280px;
+        font-size: 130px;
+        line-height: 130px;
+      }
+      .page-header-image {
+        height: 450px;
+        img {
+          height: 450px;
+        }
+      }
+    }
+  }
+}
