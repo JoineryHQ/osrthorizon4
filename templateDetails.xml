@@ -28,23 +28,23 @@
       # Not actually generated anywhere by template: position-6, position-12, position-13, position-14, position-15
       # Special treatment: position-10
       # This means we actually must support the following:
-        postion-0: user login, pre-header menu, rssocial icons
-        postion-1: main navigation menu
-        postion-3: "Welcome to OSRT" (homepage only)
-        postion-4: 
+        position-0: user login, pre-header menu, rssocial icons
+        position-1: main navigation menu
+        position-3: "Welcome to OSRT" (homepage only)
+        position-4: 
           - "Home: About" ("The OSRT promotes clinical excellence in radiologic technology ...") (homepage only)
           - "Tangram_prof_block_menu"("audience blocks" menu) (homepage only)
-        postion-5: News; More News
-        postion-7: 
+        position-5: News; More News
+        position-7: 
           - "memberships" (homepage only)
           - "recognitions" (homepage only)
         component: NOT A POSITION. Appears between position-7 and position-9; contains what you might call "the page content".
-        postion-9: 
+        position-9: 
           - "Banners - Home" (advertisements, all pages)
-        postion-10:
+        position-10:
           - Calendar (only on "About Us")
           - Contact us (only on "About Us")        
-        postion-11: user menus: "members" and "bod"
+        position-11: user menus: "members" and "bod"
         footer:
           - rssocial footer
           - ASRT Proud Affiliate
