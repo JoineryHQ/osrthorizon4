@@ -19,7 +19,6 @@
 @import "_menu";
 @import "_header";
 @import "_blog";
-
 @import "_alignment";
 
 
@@ -52,7 +51,9 @@ body {
 .container {
   min-width: 320px;
   max-width: 100%;
-  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding: 0px;
   box-sizing: border-box;
   margin: 0 auto;
 }

@@ -217,7 +217,6 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1.0');
     <?php // Generate the main content area of the website ?>
     <div class="siteBody">
         <div class="container">
-            <div class="row">
               <main>
                 <!-- message START -->
                   <jdoc:include type="message" />
@@ -226,7 +225,6 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1.0');
                   <jdoc:include type="component" />
                 <!-- component END -->
               </main>
-            </div>
         </div>
     </div>
   

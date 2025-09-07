@@ -78,7 +78,7 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
       <!-- position-10 START --><?php echo $this->document->getBuffer('modules', 'position-10', array('style' => 'none')); ?><!-- position-10 END -->
     </div>
     <div class="main-content__right">
-      <div id="indicator" class="block-stiky block-stiky__advocacy"></div>
+      <div id="indicator" class="block-stiky"></div>
     </div>
   </div>
 </div>
