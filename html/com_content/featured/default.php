@@ -59,15 +59,12 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
     ?>
 
 		<?php
-		$key = ($key - $leadingcount) + 1;
-		$rowcount = (((int) $key - 1) % (int) $this->columns) + 1;
-		$row = $counter / $this->columns;
-
-		if ($rowcount === 1) : ?>
+		$rowcount = ($key - $leadingcount);
+		$row = $counter;
+    ?>
 
 		<div class="fdsa-state-<?= $item->state ?> items-row cols-<?php echo (int) $this->columns; ?> <?php echo 'row-' . $row; ?> row-fluid">
-		<?php endif; ?>
-			<div class="item column-<?php echo $rowcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?> span<?php echo round(12 / $this->columns); ?>"
+			<div class="item column-<?php echo $rowcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?> span12"
 				itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
 			<?php
 					$this->item = &$item;
@@ -75,11 +72,7 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 			?>
 			</div>
 			<?php $counter++; ?>
-
-			<?php if (($rowcount == $this->columns) or ($counter == $introcount)) : ?>
-
 		</div>
-		<?php endif; ?>
 
 	<?php endforeach; ?>
 <?php endif; ?>
