@@ -1,10 +1,11 @@
 /*
  * ScrollSpy JavaScript Library v1.0.0
- * https://scrollspy.github.io
+ * https://scrollspy.github.io -- that URL is a 404. This code is almost surely from: https://github.com/erfanmola/ScrollSpy.js/
  *
  * Note : this source code is written in ES6 Standard which is not supported in old browsers
  * Alternatively you could use the JS file in the test folder which is compiled with babel for all browsers
  *
+ * NOTE: Altered for special functionality in osrthorizon joomla 4 template.
  */
 "use strict";
 
@@ -195,6 +196,18 @@ function ScrollSpy(
     };
 
     const ScrollToSection = (element) => {
+        // First, a hack for osrthorizon:
+        // If this element contains a named anchor with class 'section-header-link',
+        // just scroll smoothly to that and return.
+        // Otherwise, continue with the default scrollspy behavior.
+        var sectionHeaderLink = element.querySelector('a.section-header-link');
+        if (sectionHeaderLink !== null && typeof sectionHeaderLink == 'object' && sectionHeaderLink.constructor.name == 'HTMLAnchorElement') {
+          sectionHeaderLink.scrollIntoView({
+              behavior: 'smooth'
+          });
+          return;
+        }
+
         let offset;
 
         if (element.offsetHeight > page_visible_height) {
@@ -220,6 +233,8 @@ function ScrollSpy(
                 StagesPositionPercentage = [],
                 currentElement = null,
                 currentIndicator = null;
+console.log('currentIndicator', currentIndicator);
+console.log('currentElement', currentElement);
 
             Array.prototype.forEach.call(SpySections, (element) => {
 
@@ -338,7 +353,9 @@ function ScrollSpy(
 
             }
 
-
+console.log('currentIndicator', currentIndicator);
+console.log('currentElement', currentElement);
+console.log('------------');
         };
 
         if (!scrollTimer && !(force)) {

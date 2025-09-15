@@ -13,50 +13,25 @@
       $('body').toggleClass('hamburger-active');
     })
 
-    /* OSRTHORIZON-FIXME: TRANSLATE: Фиксирование плашки  */
-    $(window).scroll(function () {
-      if ($(this).scrollTop() === $('.banner').height() || $(this).scrollTop() > $('.banner').height()) {
+    /* Add top-padding when scrollspy is fixed. */
+    var headerHeight = $('header.header').height() + $('nav.navigation').height() + $('div.page-header').height();
+    var fixScrollspyTop = function fixScrollspyTop(){
+      if ($(this).scrollTop() >= headerHeight) {
         $('.block-stiky').addClass("fixed");
       } else {
         $('.block-stiky').removeClass("fixed");
       }
-    });
-
-    /**
-     * Given a string (expected: the spy-title attribute of a scrollSpy TOC item),
-     * normalize that in a way that can be used for the named-anchor part of
-     * a URL.
-     * This should work EXACTLY the same as the PHP method OsrthorizonUtils::normalizeSectionHeaderLink().
-     */
-    var normalizeSpyTitle = function normalizeSpyTitle(str) {
-      if (typeof str == 'string') {
-        return str.trim().replace(/[^0-9a-zA-Z]/g, '-').toLowerCase();
-      }
-    }
-    /**
-     * callbackOnChange handler for scrollspy. For the given scrollspy element,
-     * update the browser url to point to the relevant #anchor.
-     * @param {type} el
-     * @returns {undefined}
-     */
-    var replaceHistoryAnchor = function replaceHistoryAnchor(el) {
-      var spyTitle = $(el).attr('spy-title');
-      var normalizedSpyTitle = normalizeSpyTitle(spyTitle);
-      window.history.replaceState("", "", "#" + normalizedSpyTitle);
     };
+    fixScrollspyTop();
+    $(window).scroll(fixScrollspyTop);
 
     /* Auto-generated TOC (https://www.cssscript.com/update-navigation-scroll-position-scrollspy/) */
+    console.log('new scrollspy ...');
     let spy = new ScrollSpy({
-      contexts_class: 'scrollspy',
-      callbackOnChange: replaceHistoryAnchor
+      sectionSelector: '.scrollspy',
+      containerSelector: '#indicator',
     });
-    let indicator = document.getElementById('indicator');
 
-    if (indicator) {
-      spy.Indicator({
-        element: indicator,
-      });
-    }
 
     // Add 'swiper' class to div.bannergroup
     $('div.bannergroup').addClass('swiper');

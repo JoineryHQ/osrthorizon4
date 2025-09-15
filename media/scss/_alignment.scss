@@ -1,10 +1,76 @@
+$left-spacing: 15px;
+$left-spacing-md: 20px;
+$left-spacing-xl: 25px;
+$left-spacing-xxl: 36px;
+
 // Double-class identifier gives more specificity, allowing to override styles
 // specified later for merely ".container"
 .container.main-content {
-  /* FIXME: left/right padding is a temporary value, needs some thought/review. */
-  padding-left: 15px;
+  padding-left: $left-spacing;
+}
+.blog.content-category-custom {
+  .page-header {
+    .subheading-category {
+      left: $left-spacing;
+    }
+  }
+}
+header.header {
+  .header__left {
+    left: $left-spacing;
+  }
 }
 
-@include media-breakpoint-up(md) {}
-@include media-breakpoint-up(xl) {}
-@include media-breakpoint-up(xxl) {}
+@include media-breakpoint-up(md) {
+  .container.main-content {
+    padding-left: $left-spacing-md;
+  }
+  .blog.content-category-custom {
+    .page-header {
+      .subheading-category {
+        left: $left-spacing-md;
+      }
+    }
+  }
+  header.header {
+    .header__left {
+      left: $left-spacing-md;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .container.main-content {
+    padding-left: $left-spacing-xl;
+  }
+  .blog.content-category-custom {
+    .page-header {
+      .subheading-category {
+        left: $left-spacing-xl;
+      }
+    }
+  }
+  header.header {
+    .header__left {
+      left: $left-spacing-xl;
+    }
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .container.main-content {
+    padding-left: $left-spacing-xxl;
+  }
+  .blog.content-category-custom {
+    .page-header {
+      .subheading-category {
+        left: $left-spacing-xxl;
+      }
+    }
+  }
+  header.header {
+    .header__left {
+      left: $left-spacing-xxl;
+    }
+  }
+}

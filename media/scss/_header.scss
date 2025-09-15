@@ -50,7 +50,8 @@ header.header {
   }
   
   .header__left {
-      padding: 20px 20px 20px 15px;
+      padding: 20px 20px 20px 0px;
+      position: relative;
   }
   .brand img, .footer-main img {
     width: 130px;

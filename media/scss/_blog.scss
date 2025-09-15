@@ -7,7 +7,6 @@
       font-size: 50px;
       max-width: 975px;
       bottom: 20px;
-      left: 36px;
       z-index: 1;
       color: #fff;      
     }
@@ -32,6 +31,10 @@
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.1);
+  }
+  /* The actual category page header gets a darker overlay */
+  > .page-header::after {
+    background: rgba(0,0,0,0.35);
   }
   
   .main-content__left .page-header {
@@ -75,7 +78,7 @@
   
   a.section-header-link {
       position: absolute;
-      top: -100px;
+      top: -50px;
       visibility: hidden;
   }  
 }
@@ -83,6 +86,9 @@
 .blog.blog-proffesionals {
   .page-header::after{
       background-color: rgba($orange-color, 0.2);      
+  }
+  > .page-header::after{
+      background-color: rgba($orange-color, 0.5);      
   }
   .main-content__left .page-header {
       h2:after {
@@ -97,11 +103,17 @@
   }
   .block-stiky {
     border-color: $orange-color;
+    li:hover {
+      color: $orange-color;
+    }      
   }
 }
 .blog.blog-advocacy {
   .page-header::after {
       background-color: rgba($green-color, 0.2);
+  }  
+  > .page-header::after {
+      background-color: rgba($green-color, 0.5);
   }  
   .main-content__left .page-header {
       h2:after {
@@ -116,11 +128,17 @@
   }
   .block-stiky {
     border-color: $green-color;
+    li:hover {
+      color: $green-color;
+    }      
   }
 }
 .blog.blog-education {
   .page-header::after {
       background-color: rgba($blue-color, 0.2);
+  }  
+  > .page-header::after {
+      background-color: rgba($blue-color, 0.5);
   }  
   .main-content__left .page-header {
       h2:after {
@@ -135,11 +153,17 @@
   }
   .block-stiky {
     border-color: $blue-color;
+    li:hover {
+      color: $blue-color;
+    }      
   }
 }
 .blog.blog-foundation {
   .page-header::after{
       background-color: rgba($yellow-color, 0.2);
+  }
+  > .page-header::after{
+      background-color: rgba($yellow-color, 0.5);
   }
   .main-content__left .page-header {
       h2:after {
@@ -154,6 +178,9 @@
   }
   .block-stiky {
     border-color: $yellow-color;
+    li:hover {
+      color: $yellow-color;
+    }      
   }
 }
 
@@ -167,7 +194,6 @@
   }
   .main-content__left {
     a {
-      font-size: .8em;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -201,12 +227,24 @@
         font-weight: 700;        
       }
     }
+    li:hover {
+      color: $login-bg-color;
+    }      
   }
+  .block-stiky.fixed {
+    top: 25px;
+    
+  }  
   .category-desc {
       font-size: 30px;
       line-height: 36px;
       color: $title-color;
       margin-bottom: 50px;
+  }  
+  .item p, .item li {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 15px 0;
   }  
 }
 
@@ -234,6 +272,7 @@
     }
   }
 }
+
 @include media-breakpoint-up(xl) {
   .blog.content-category-custom {
     .page-header {
@@ -261,10 +300,11 @@
 }
 
 @include media-breakpoint-up(xxl) {
-  blog.content-category-custom {
+  .blog.content-category-custom {
     .page-header {
       .subheading-category {
-        font-size: 130px;
+        font-size: 170px;
+        line-height: 160px;
       }
       .page-header-image {
         height: 450px;

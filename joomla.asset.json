@@ -43,7 +43,7 @@
       "name": "template.osrthorizon.scrollspy.js",
       "description": "Scrollspy js",
       "type": "script",
-      "uri": "scrollspy.min.js",
+      "uri": "horizon-scrollspy.js",
       "attributes" : {
         "defer": true
       },

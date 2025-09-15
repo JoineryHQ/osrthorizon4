@@ -1,0 +1,21 @@
+/**
+ * The class osrthorizon-content-body wraps all major content items (articles), so these 
+ * styles are essentially site-wide rules for article presentation.
+ */
+.osrthorizon-content-body {
+  p, li {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 15px 0;
+    a {
+      // Per existing html content, some links are wrapped in <span>s which force
+      // a 10px font-size, which is ridiculous. Force them to be .8em of the align-content: 
+      // surrounding text (which, per <p> rules above, is 28px.)
+      font-size: (28px * .8);      
+      text-decoration: underline;
+    }
+  }  
+  ul {
+    list-style: outside disc;
+  }  
+}
