@@ -11,6 +11,8 @@ body {
   word-wrap: break-word;
   
   div.icons.osrthorizon-hide-icons {
+    // These would give "easy" access to actions such as "edit", but they sometimes
+    // breaks layout, and sometimes lead to error pages. So just hide them.align-content:
     display: none;
   }
   span.badge.bg-warning {

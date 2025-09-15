@@ -12520,6 +12520,7 @@ header.header .position-0 form.mod-login-logout div.logout-button button {
   visibility: hidden;
 }
 .blog.content-category-custom .items-row {
+  max-width: 1300px;
   margin-bottom: 3em;
 }
 
@@ -12624,6 +12625,7 @@ header.header .position-0 form.mod-login-logout div.logout-button button {
   padding: 5px 15px;
   color: #fff;
   background-color: #FF5F00;
+  border-color: #FF5F00;
   border-radius: 13px;
 }
 .blog .main-content__right {
