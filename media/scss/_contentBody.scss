@@ -14,8 +14,29 @@
       font-size: (28px * .8);      
       text-decoration: underline;
     }
+    // Youtube videos embedded in content should never exceed container width.
+    iframe {
+      max-width: 100%;
+    }
   }  
   ul {
     list-style: outside disc;
-  }  
+  }
+  
+  h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    padding: 0;    
+  }
+  h1 {
+    font-size: 2em;
+    margin: 0 0 0.75em;
+  }
+  h2 {
+    font-size: 1.5em;
+    margin: 0 0 1em;
+  }
+  h3 {
+    font-size: 1.1666em;
+    margin: 0 0 1.286em;  
+  }
 }

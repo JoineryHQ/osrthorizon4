@@ -43,8 +43,12 @@
     top: unset;
     left: unset;
     margin-bottom: 30px;
-    padding: 18px 20px 19px 0;    
+    padding: 18px 20px 19px 0;   
+    // Ensure header (including its pointy tail, which is 74px wide) never 
+    // exceeds the width of main-content__left.
+    max-width: calc(100% - 74px);
     h2 {
+      font-family: 'DIN2014-Demi', sans-serif;
       font-size: 28px;
       font-weight: 700;
       color: $dark-color;

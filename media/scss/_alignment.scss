@@ -1,76 +1,78 @@
-$left-spacing: 15px;
-$left-spacing-md: 20px;
-$left-spacing-xl: 25px;
-$left-spacing-xxl: 36px;
+$horizontal-spacing: 25px;
+$horizontal-spacing-md: 25px;
+$horizontal-spacing-xl: 30px;
+$horizontal-spacing-xxl: 36px;
 
 // Double-class identifier gives more specificity, allowing to override styles
 // specified later for merely ".container"
 .container.main-content {
-  padding-left: $left-spacing;
+  max-width: 1770px;
+  padding-left: $horizontal-spacing;
+  padding-right: $horizontal-spacing;
 }
 .blog.content-category-custom {
   .page-header {
     .subheading-category {
-      left: $left-spacing;
+      left: $horizontal-spacing;
     }
   }
 }
 header.header {
   .header__left {
-    left: $left-spacing;
+    left: $horizontal-spacing;
   }
 }
 
 @include media-breakpoint-up(md) {
   .container.main-content {
-    padding-left: $left-spacing-md;
+    padding-left: $horizontal-spacing-md;
   }
   .blog.content-category-custom {
     .page-header {
       .subheading-category {
-        left: $left-spacing-md;
+        left: $horizontal-spacing-md;
       }
     }
   }
   header.header {
     .header__left {
-      left: $left-spacing-md;
+      left: $horizontal-spacing-md;
     }
   }
 }
 
 @include media-breakpoint-up(xl) {
   .container.main-content {
-    padding-left: $left-spacing-xl;
+    padding-left: $horizontal-spacing-xl;
   }
   .blog.content-category-custom {
     .page-header {
       .subheading-category {
-        left: $left-spacing-xl;
+        left: $horizontal-spacing-xl;
       }
     }
   }
   header.header {
     .header__left {
-      left: $left-spacing-xl;
+      left: $horizontal-spacing-xl;
     }
   }
 }
 
 @include media-breakpoint-up(xxl) {
   .container.main-content {
-    padding-left: $left-spacing-xxl;
+    padding-left: $horizontal-spacing-xxl;
   }
   .blog.content-category-custom {
     .page-header {
       .subheading-category {
-        left: $left-spacing-xxl;
+        left: $horizontal-spacing-xxl;
       }
     }
   }
   header.header {
     .header__left {
-      left: $left-spacing-xxl;
+      left: $horizontal-spacing-xxl;
     }
   }
 }
