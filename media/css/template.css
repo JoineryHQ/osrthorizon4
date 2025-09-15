@@ -12008,6 +12008,59 @@ textarea.form-control-lg {
 /*text color for "news" divider on home page*/
 /* gray background color, as on Memberships and Recognitions blocks on home-page */
 /* transparent black color to overlay page-title-banner images for improved readability */
+/**
+ * Site-wide styles.
+ * NOTE: please take care to use this stylesheet ONLY to describe very narrow rules
+ * that are truly relevant site-wide.
+ */
+body {
+  font-family: "DIN2014", sans-serif;
+  font-weight: 400;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+body div.icons.osrthorizon-hide-icons {
+  display: none;
+}
+body span.badge.bg-warning {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+}
+body .readmore .btn {
+  font-size: 28px;
+  height: 72px;
+  line-height: 39px;
+  width: 550px;
+}
+body .readmore .btn span.icon-chevron-right {
+  display: none;
+}
+body a {
+  text-decoration: none;
+}
+body ul {
+  list-style: none;
+}
+body img {
+  max-width: 100%;
+  height: auto;
+}
+body .btn-red {
+  background-color: #FF5F00;
+  border-radius: 15px;
+}
+body .btn-blue {
+  background-color: #3cb4e5;
+  border-radius: 15px;
+  height: 70px;
+  width: 240px;
+}
+body img {
+  max-width: 100%;
+  height: auto;
+}
+
 .navigation {
   display: none;
 }
@@ -12466,6 +12519,9 @@ header.header .position-0 form.mod-login-logout div.logout-button button {
   top: -50px;
   visibility: hidden;
 }
+.blog.content-category-custom .items-row {
+  margin-bottom: 3em;
+}
 
 .blog.blog-proffesionals .page-header::after {
   background-color: rgba(247, 147, 30, 0.2);
@@ -12817,13 +12873,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: "DIN2014", sans-serif;
-  font-weight: 400;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
-
 .container {
   min-width: 320px;
   max-width: 100%;
@@ -12840,52 +12889,6 @@ body {
   padding: 0 15px;
   box-sizing: border-box;
   margin: 0 auto;
-}
-
-.container {
-  /*  max-width: 1770px;
-    margin: 0 auto;*/
-  /*padding: 0 15px;*/
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.btn {
-  font-family: "DIN2014-Demi", sans-serif;
-  font-size: 28px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 15px;
-  color: #fff;
-}
-
-.btn-red {
-  background-color: #FF5F00;
-  border-radius: 15px;
-}
-
-.btn-blue {
-  background-color: #3cb4e5;
-  border-radius: 15px;
-  height: 70px;
-  width: 240px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 .jmodedit, div[role=tooltip] {

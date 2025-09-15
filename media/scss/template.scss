@@ -16,6 +16,7 @@
 // Import this file to make columns work in com_content
 @import "_modifiers"; // OSRTHORIZON-FIXME: IS _modifiers EVEN NEEDED?
 @import "_variables";
+@import "_body";
 @import "_menu";
 @import "_header";
 @import "_blog";
@@ -43,12 +44,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: 'DIN2014', sans-serif;
-  font-weight: 400;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
 
 .container {
   min-width: 320px;
@@ -68,54 +63,6 @@ body {
   margin: 0 auto;
 }
 
-.container{
-/*  max-width: 1770px;
-  margin: 0 auto;*/
-  /*padding: 0 15px;*/
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
-img{
-  max-width: 100%;
-  height: auto;
-}
-
-.btn{
-  font-family: "DIN2014-Demi",sans-serif;
-  font-size: 28px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 15px;
-  color: $white-color;
-}
-
-.btn-red{
-  background-color: $btn-bg-color;
-  border-radius: 15px;
-}
-
-.btn-blue{
-  background-color: $blue-color;
-  border-radius: 15px;
-  height: 70px;
-  width: 240px;
-}
-
-
-
-//Basic Responsive Images
-img{
-    max-width: 100%;
-    height: auto;
-}
 
 // Hide jmodedit and related (when admin user is logged in); they break the layout
 // and I don't want to mess with it.

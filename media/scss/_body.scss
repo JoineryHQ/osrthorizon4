@@ -1,0 +1,66 @@
+/**
+ * Site-wide styles.
+ * NOTE: please take care to use this stylesheet ONLY to describe very narrow rules
+ * that are truly relevant site-wide.
+ */
+body {
+
+  font-family: 'DIN2014', sans-serif;
+  font-weight: 400;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  
+  div.icons.osrthorizon-hide-icons {
+    display: none;
+  }
+  span.badge.bg-warning {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+  }
+  
+  .readmore .btn {
+    font-size: $default-content-font-size;
+    height: 72px;
+    line-height: 39px;
+    width: 550px;    
+    span.icon-chevron-right {
+      display: none;
+    }
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  .btn-red{
+    background-color: $btn-bg-color;
+    border-radius: 15px;
+  }
+
+  .btn-blue{
+    background-color: $blue-color;
+    border-radius: 15px;
+    height: 70px;
+    width: 240px;
+  }
+
+
+
+  //Basic Responsive Images
+  img{
+      max-width: 100%;
+      height: auto;
+  }
+  
+  
+}
