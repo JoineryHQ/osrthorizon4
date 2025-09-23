@@ -233,11 +233,11 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1.0');
     <!-- position-9 START --><jdoc:include type="modules" name="position-9" style="none" /><!-- position-9 END -->
     <div class="clearfix"></div>
 
-    <div class="container">
+    <div class="container bottom-content">
         <div class="main-content__top top_header">Back to Top</div>
     </div>
     <?php // Load Footer ?>
-    <footer class="footer mt-auto py-3 bg-light ">
+    <footer class="footer mt-auto">
         <div class="wrapper">
             <div class="footer-block">
                 <?php echo HTMLHelper::_('image', 'footer-line.png', '', [], true, 0); ?>

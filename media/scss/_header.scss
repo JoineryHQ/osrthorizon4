@@ -1,7 +1,10 @@
 header.header {
-  background: $header-bg url(/media/templates/site/osrthorizon/images/header-line.png) no-repeat;
-  background-position-x: 112px;
+  background-color: $header-bg;
+  background-image: url(/media/templates/site/osrthorizon/images/header-line.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
   background-position-y: 120px;
+  background-size: min(80%, 811px);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -139,6 +142,7 @@ header.header {
   }
   @include media-breakpoint-up(xl) {
     background-position-y: 160px;
+    background-size: auto;
     .brand img, .footer-main img {
       width: initial;
     }

@@ -5,7 +5,7 @@ $horizontal-spacing-xxl: 36px;
 
 // Double-class identifier gives more specificity, allowing to override styles
 // specified later for merely ".container"
-.container.main-content {
+.container.main-content, .container.bottom-content, .footer {
   max-width: 1770px;
   padding-left: $horizontal-spacing;
   padding-right: $horizontal-spacing;
@@ -24,7 +24,7 @@ header.header {
 }
 
 @include media-breakpoint-up(md) {
-  .container.main-content {
+  .container.main-content, .container.bottom-content {
     padding-left: $horizontal-spacing-md;
   }
   .blog.content-category-custom {
@@ -42,7 +42,7 @@ header.header {
 }
 
 @include media-breakpoint-up(xl) {
-  .container.main-content {
+  .container.main-content, .container.bottom-content {
     padding-left: $horizontal-spacing-xl;
   }
   .blog.content-category-custom {
@@ -60,7 +60,7 @@ header.header {
 }
 
 @include media-breakpoint-up(xxl) {
-  .container.main-content {
+  .container.main-content, .container.bottom-content {
     padding-left: $horizontal-spacing-xxl;
   }
   .blog.content-category-custom {
