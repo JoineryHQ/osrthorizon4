@@ -1,3 +1,9 @@
+/**
+ * IMPORTANT: In order to preserve CSS specificity, CSS identifiers and nested
+ * SCSS structures are replicated here, per the given _[source].scss file.
+ */
+
+// Standard variables for spacing:
 $horizontal-spacing: 25px;
 $horizontal-spacing-md: 25px;
 $horizontal-spacing-xl: 30px;
@@ -6,10 +12,11 @@ $horizontal-spacing-xxl: 36px;
 // Double-class identifier gives more specificity, allowing to override styles
 // specified later for merely ".container"
 .container.main-content, .container.bottom-content, .footer {
-  max-width: 1770px;
   padding-left: $horizontal-spacing;
   padding-right: $horizontal-spacing;
 }
+
+// From _blog.scss:
 .blog.content-category-custom {
   .page-header {
     .subheading-category {
@@ -17,9 +24,53 @@ $horizontal-spacing-xxl: 36px;
     }
   }
 }
+
+// From _header.scss
 header.header {
   .header__left {
     left: $horizontal-spacing;
+  }
+}
+
+// From _home.scss
+body.itemid-136 {
+  div#osrthorizon-position-3 {
+    .mod-custom.custom {
+      .banner-block {
+        padding-left: $horizontal-spacing;
+      }
+    }
+  }
+  div#osrthorizon-position-4 {
+    ul.navbar-nav {
+      li {
+        a {
+          span.image-title {
+            left: $horizontal-spacing;
+          }
+        }
+      }
+    }
+    .mod-custom.custom {
+      padding-left: $horizontal-spacing;
+      padding-right: $horizontal-spacing;
+    }
+  }
+  div#osrthorizon-position-5 {
+    .moduletable.-test-news {
+      ul.newsflash-horiz {
+        li {
+          h2.newsflash-title {
+            a {
+              padding-left: $horizontal-spacing;
+            }
+          }
+        }
+      }
+    }
+    .main-content__morenews  {
+      padding-left: $horizontal-spacing;
+    }
   }
 }
 
@@ -37,6 +88,39 @@ header.header {
   header.header {
     .header__left {
       left: $horizontal-spacing-md;
+    }
+  }
+  body.itemid-136 {
+    div#osrthorizon-position-4 {
+      ul.navbar-nav {
+        li {
+          a {
+            span.image-title {
+              left: $horizontal-spacing-md;
+            }
+          }
+        }
+      }
+      .mod-custom.custom {
+        padding-left: $horizontal-spacing-md;
+        padding-right: $horizontal-spacing-md;
+      }
+    }
+    div#osrthorizon-position-5 {
+      .moduletable.-test-news {
+        ul.newsflash-horiz {
+          li {
+            h2.newsflash-title {
+              a {
+                padding-left: $horizontal-spacing-md;
+              }
+            }
+          }
+        }
+      }
+      .main-content__morenews  {
+        padding-left: $horizontal-spacing-md;
+      }
     }
   }
 }
@@ -57,6 +141,39 @@ header.header {
       left: $horizontal-spacing-xl;
     }
   }
+  body.itemid-136 {
+    div#osrthorizon-position-4 {
+      ul.navbar-nav {
+        li {
+          a {
+            span.image-title {
+              left: $horizontal-spacing-xl;
+            }
+          }
+        }
+      }
+      .mod-custom.custom {
+        padding-left: $horizontal-spacing-xl;
+        padding-right: $horizontal-spacing-xl;
+      }
+    }
+    div#osrthorizon-position-5 {
+      .moduletable.-test-news {
+        ul.newsflash-horiz {
+          li {
+            h2.newsflash-title {
+              a {
+                padding-left: $horizontal-spacing-xl;
+              }
+            }
+          }
+        }
+      }
+      .main-content__morenews  {
+        padding-left: $horizontal-spacing-xl;
+      }
+    }
+  }
 }
 
 @include media-breakpoint-up(xxl) {
@@ -73,6 +190,39 @@ header.header {
   header.header {
     .header__left {
       left: $horizontal-spacing-xxl;
+    }
+  }
+  body.itemid-136 {
+    div#osrthorizon-position-4 {
+      ul.navbar-nav {
+        li {
+          a {
+            span.image-title {
+              left: $horizontal-spacing-xxl;
+            }
+          }
+        }
+      }
+      .mod-custom.custom {
+        padding-left: $horizontal-spacing-xxl;
+        padding-right: $horizontal-spacing-xxl;
+      }
+    }
+    div#osrthorizon-position-5 {
+      .moduletable.-test-news {
+        ul.newsflash-horiz {
+          li {
+            h2.newsflash-title {
+              a {
+                padding-left: $horizontal-spacing-xxl;
+              }
+            }
+          }
+        }
+      }
+      .main-content__morenews  {
+        padding-left: $horizontal-spacing-xxl;
+      }
     }
   }
 }

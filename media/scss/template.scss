@@ -23,6 +23,7 @@
 @import "_alignment";
 @import "_contentBody";
 @import "_employeesBlock";
+@import "_home";
 @import "_footer";
 
 
@@ -31,6 +32,9 @@
 
 //Your CSS Here
 
+p {
+  margin-bottom: 0px;
+}
 
 *, *:before, *:after{
   padding: 0;

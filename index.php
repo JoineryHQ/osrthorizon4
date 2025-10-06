@@ -209,9 +209,12 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1.0');
       <?php endif; ?>
     </nav>
   <?php endif; ?>
-  <!-- position-3 START --><jdoc:include type="modules" name="position-3" style="none" /><!-- position-3 END -->
-  <!-- position-4 START --><jdoc:include type="modules" name="position-4" style="xhtml" /><!-- position-4 END -->
-  <!-- position-5 START --><jdoc:include type="modules" name="position-5" style="xhtml" /><!-- position-5 END -->
+  <!-- position-3 START --><div id="osrthorizon-position-3"><jdoc:include type="modules" name="position-3" style="none" /></div><!-- position-3 END -->
+  <!-- position-4 START --><div id="osrthorizon-position-4"><jdoc:include type="modules" name="position-4" style="html5" /></div><!-- position-4 END -->
+  <!-- position-5 START --><div id="osrthorizon-position-5">
+    <?php // Note it's critical to use style='html5' here, so that module titles will display if so configured. ?>
+    <jdoc:include type="modules" name="position-5" style="html5" />
+  </div><!-- position-5 END -->
   <!-- position-7 START --><jdoc:include type="modules" name="position-7" style="well" /><!-- position-7 END -->
   
     <?php // Generate the main content area of the website ?>
