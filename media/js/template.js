@@ -26,7 +26,6 @@
     $(window).scroll(fixScrollspyTop);
 
     /* Auto-generated TOC (https://www.cssscript.com/update-navigation-scroll-position-scrollspy/) */
-    console.log('new scrollspy ...');
     let spy = new ScrollSpy({
       sectionSelector: '.scrollspy',
       containerSelector: '#indicator',
@@ -34,7 +33,9 @@
 
 
     // Add 'swiper' class to div.bannergroup
+    console.log('div.bannergroup', $('div.bannergroup').length);
     $('div.bannergroup').addClass('swiper');
+    
     //  create a swiper-wrapper div inside of div.bannergroup.
     $('div.bannergroup').append('<div class="swiper-wrapper">');
     // Move all div.banneritem elements into div.swipper-wrapper

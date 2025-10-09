@@ -64,6 +64,12 @@
       ]
     },
     {
+      "name": "template.osrthorizon.swiper.css",
+      "description": "Swiper css",
+      "type": "style",
+      "uri": "swiper-bundle.min.css"
+    },
+    {
       "name": "template.active",
       "description": "A dummy asset to allow extensions to use it as a dependency to the active template.",
       "type": "script",

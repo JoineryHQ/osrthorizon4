@@ -66,6 +66,7 @@ $templatePath = 'templates/' . $this->template;
 $wa->useStyle('template.osrthorizon.template.css');
 $wa->useStyle('template.osrthorizon.user.css');
 $wa->useStyle('template.osrthorizon.fonts.css');
+$wa->useStyle('template.osrthorizon.swiper.css');
 $wa->useScript('template.osrthorizon.template.js');
 $wa->useScript('template.osrthorizon.scrollspy.js');
 $wa->useScript('template.osrthorizon.swiper.js');
@@ -215,7 +216,7 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1.0');
     <?php // Note it's critical to use style='html5' here, so that module titles will display if so configured. ?>
     <jdoc:include type="modules" name="position-5" style="html5" />
   </div><!-- position-5 END -->
-  <!-- position-7 START --><jdoc:include type="modules" name="position-7" style="well" /><!-- position-7 END -->
+  <!-- position-7 START --><div id="osrthorizon-position-7"><jdoc:include type="modules" name="position-7" style="html5" /></div><!-- position-7 END -->
   
     <?php // Generate the main content area of the website ?>
     <div class="siteBody">

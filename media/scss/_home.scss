@@ -200,6 +200,81 @@ body.itemid-136 {
       }
     }
   }
+  div#osrthorizon-position-7 {
+    margin-bottom: 25px;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    display: grid;
+    grid-column-gap: 10px;
+    .home-members-block {
+      background-color: $background-banner;
+      position: relative;
+      h3 {
+        font-family: 'DIN2014-Demi', sans-serif;
+        color: $title-color;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 26px;
+        left: 36%;
+        margin-left: 30px;
+      }
+      .mod-custom {
+        height: 200px;
+        background-size: 115px;
+        background-position-y: center;
+        // background-position-x: see _alignment.scss
+        background-repeat: no-repeat;
+        padding-top: 70px;
+        padding-right: 11px;
+        padding-bottom: 0px;
+        // padding-left: see _alignment.scss
+
+        a {
+          position: absolute;
+          right: 11px;
+          bottom: 0;
+          font-family: 'DIN2014-Demi', sans-serif;
+          display: inline-flex;
+          background-color: $login-bg-color;
+          color: $white-color;
+          border-bottom-left-radius: 0;
+          align-items: center;
+          justify-content: center;
+          padding: 0;
+          min-height: 50px;
+          font-size: 24px;
+          border-top-left-radius: 35px;
+          border-top-right-radius: 35px;
+          height: 45px;
+          width: 130px;
+        }
+      }
+    }
+  }
+  .siteBody {
+    position: relative;
+    .blog-featured {
+      margin-bottom: 25px;
+      .label-warning {
+        display: none;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .item-title a {
+        padding-top: 65px;
+        font-size: 56px;
+        line-height: 60px;
+        height: 100%;
+        font-family: 'DIN2014-Demi', sans-serif;
+        color: $white-color !important;
+        z-index: 1;
+        position: absolute;
+      }
+    }
+  }
 }
 
 @include media-breakpoint-up(md) {
@@ -255,6 +330,32 @@ body.itemid-136 {
         }
       }
     }
+    div#osrthorizon-position-7 {
+      .home-members-block {
+        h3 {
+          font-size: 30px;
+        }
+        .mod-custom {
+          height: 275px;
+          a {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            font-size: 30px;
+            width: 154px;
+            height: 50px;
+          }
+        }
+      }
+    }
+    .siteBody {
+      .blog-featured {
+        .item-title a {
+          padding-top: 70px;
+          font-size: 70px;
+          line-height: 100px;
+        }
+      }
+    }
   }
 }
 
@@ -275,6 +376,35 @@ body.itemid-136 {
         p {
           font-size: 42px;
           line-height: 50px;
+        }
+      }
+    }
+    div#osrthorizon-position-7 {
+      margin-bottom: 50px;
+      .home-members-block {
+        h3 {
+          font-size: 42px;
+          left: 27%;
+          margin-left: 50px;
+        }
+        .mod-custom {
+          background-size: auto;
+          a {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            font-size: 30px;
+            width: 154px;
+            height: 50px;
+          }
+        }
+      }
+    }
+    .siteBody {
+      .blog-featured {
+        .item-title a {
+          padding-top: 110px;
+          font-size: 100px;
+          line-height: 130px;
         }
       }
     }
@@ -313,6 +443,37 @@ body.itemid-136 {
               }
             }
           }
+        }
+      }
+    }
+    div#osrthorizon-position-7 {
+      margin-bottom: 50px;
+
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 10px;
+      .home-members-block {
+        h3 {
+          font-size: 50px;
+          left: 50%;
+        }
+        .mod-custom {
+          background-size: auto;
+          a {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            font-size: 30px;
+            width: 154px;
+            height: 50px;
+          }
+        }
+      }
+    }
+    .siteBody {
+      .blog-featured {
+        margin-bottom: 50px;
+        .item-title a {
+          font-size: 130px;
+          line-height: 188px;
         }
       }
     }
