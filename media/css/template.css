@@ -12674,6 +12674,14 @@ header.header .position-0 form.mod-login-logout div.logout-button button {
   line-height: 34px;
   margin: 15px 0;
 }
+.blog div.mod-contacts-list h4, .blog div.mod-contacts-list .h4, .blog div.mod-contacts-list p {
+  display: inline-block;
+  font-size: 28px;
+  margin: 0 0.25em 0 0 !important;
+}
+.blog div.mod-contacts-list li {
+  margin-bottom: 1.5rem !important;
+}
 
 @media (min-width: 768px) {
   blog.content-category-custom .page-header .subheading-category {
@@ -13447,6 +13455,11 @@ body.itemid-136 .siteBody .blog-featured .item-title a {
   }
 }
 
+/** Utility classes for special needs */
+.osrthorizon-bottom-margin {
+  margin-bottom: 2em;
+}
+
 p {
   margin-bottom: 0px;
 }
@@ -13472,16 +13485,10 @@ html {
   margin: 0 auto;
 }
 
-/* This broad class is being problematic, e.g. applying padding to footer
- * where not desired. Removing.
-.wrapper {
-  min-width: 320px;
-  max-width: 1920px;
-  padding: 0 15px;
-  box-sizing: border-box;
-  margin: 0 auto;
+.container.bottom-content {
+  margin-top: 2em;
 }
-*/
+
 .jmodedit, div[role=tooltip] {
   display: none !important;
 }

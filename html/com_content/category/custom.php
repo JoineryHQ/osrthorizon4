@@ -75,7 +75,7 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
           </div>
         <?php endforeach; ?>
       <?php endif; ?>
-      <!-- position-10 START --><?php echo $this->document->getBuffer('modules', 'position-10', array('style' => 'none')); ?><!-- position-10 END -->
+      <!-- position-10 START --><?php echo $this->document->getBuffer('modules', 'position-10', array('style' => 'html5')); ?><!-- position-10 END -->
     </div>
     <div class="main-content__right">
       <div id="indicator" class="block-stiky"></div>

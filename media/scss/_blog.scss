@@ -255,6 +255,17 @@
     font-size: 28px;
     line-height: 34px;
     margin: 15px 0;
+  }
+  // Styles for mod-contact-list (e.g. /about-us)
+  div.mod-contacts-list {
+    h4, p {
+      display: inline-block;
+      font-size: 28px;
+      margin: 0 .25em 0 0 !important;
+    }
+    li {
+      margin-bottom: 1.5rem !important; // important to override bootstrap, derp.
+    }
   }  
 }
 

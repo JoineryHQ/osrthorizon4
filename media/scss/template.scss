@@ -26,6 +26,7 @@
 @import "_home";
 @import "_swiper";
 @import "_footer";
+@import "_utility";
 
 
 //Your Imports Here
@@ -60,18 +61,9 @@ html {
   box-sizing: border-box;
   margin: 0 auto;
 }
-
-/* This broad class is being problematic, e.g. applying padding to footer
- * where not desired. Removing.
-.wrapper {
-  min-width: 320px;
-  max-width: 1920px;
-  padding: 0 15px;
-  box-sizing: border-box;
-  margin: 0 auto;
+.container.bottom-content {
+  margin-top: 2em;
 }
-*/
-
 
 // Hide jmodedit and related (when admin user is logged in); they break the layout
 // and I don't want to mess with it.

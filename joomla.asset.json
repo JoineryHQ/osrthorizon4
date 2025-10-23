@@ -55,7 +55,7 @@
       "name": "template.osrthorizon.swiper.js",
       "description": "Swiper js",
       "type": "script",
-      "uri": "swiperswiper-bundle.min.js",
+      "uri": "swiper-bundle.min.js",
       "attributes" : {
         "defer": true
       },
