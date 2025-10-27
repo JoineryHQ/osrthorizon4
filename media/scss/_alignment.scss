@@ -3,12 +3,6 @@
  * SCSS structures are replicated here, per the given _[source].scss file.
  */
 
-// Standard variables for spacing:
-$horizontal-spacing: 25px;
-$horizontal-spacing-md: 25px;
-$horizontal-spacing-xl: 30px;
-$horizontal-spacing-xxl: 36px;
-
 // Double-class identifier gives more specificity, allowing to override styles
 // specified later for merely ".container"
 .container.main-content, .container.bottom-content, .footer {
@@ -33,7 +27,7 @@ header.header {
 }
 
 // From _home.scss
-body.itemid-136 {
+body.view-featured {
   div#osrthorizon-position-3 {
     .mod-custom.custom {
       .banner-block {
@@ -80,13 +74,24 @@ body.itemid-136 {
     }
   }
   .siteBody {
-    .blog-featured {    
+    // Default .siteBody has left padding, but we don't want it on view-featured pages.
+    padding-left: 0px;
+    .blog-featured {
       .item-title a {
         padding-left: $horizontal-spacing;
       }
     }
-  }  
+  }
 }
+
+// From _view-category.scss
+body.view-category {
+  .siteBody {
+    // Default .siteBody has left padding, but we don't want it on view-category pages.
+    padding-left: 0px;
+  }
+}
+
 
 @include media-breakpoint-up(md) {
   .container.main-content, .container.bottom-content {
@@ -104,7 +109,7 @@ body.itemid-136 {
       left: $horizontal-spacing-md;
     }
   }
-  body.itemid-136 {
+  body.view-featured {
     div#osrthorizon-position-4 {
       ul.navbar-nav {
         li {
@@ -144,7 +149,7 @@ body.itemid-136 {
       }
     }
     .siteBody {
-      .blog-featured {    
+      .blog-featured {
         .item-title a {
           padding-left: $horizontal-spacing-md;
         }
@@ -169,7 +174,7 @@ body.itemid-136 {
       left: $horizontal-spacing-xl;
     }
   }
-  body.itemid-136 {
+  body.view-featured {
     div#osrthorizon-position-4 {
       ul.navbar-nav {
         li {
@@ -209,7 +214,7 @@ body.itemid-136 {
       }
     }
     .siteBody {
-      .blog-featured {    
+      .blog-featured {
         .item-title a {
           padding-left: $horizontal-spacing-xl;
         }
@@ -234,7 +239,7 @@ body.itemid-136 {
       left: $horizontal-spacing-xxl;
     }
   }
-  body.itemid-136 {
+  body.view-featured {
     div#osrthorizon-position-4 {
       ul.navbar-nav {
         li {
@@ -274,7 +279,7 @@ body.itemid-136 {
       }
     }
     .siteBody {
-      .blog-featured {    
+      .blog-featured {
         .item-title a {
           padding-left: $horizontal-spacing-xxl;
         }
@@ -282,3 +287,4 @@ body.itemid-136 {
     }
   }
 }
+

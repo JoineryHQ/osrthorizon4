@@ -1,5 +1,5 @@
 /* Homepage is article 136. */
-body.itemid-136 {
+body.view-featured {
   div#osrthorizon-position-3 {
     .mod-custom.custom {
       background-repeat: no-repeat;
@@ -254,11 +254,12 @@ body.itemid-136 {
   }
   .siteBody {
     position: relative;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    max-width: revert;
     .blog-featured {
       margin-bottom: 25px;
-      .label-warning {
-        display: none;
-      }
       img {
         width: 100%;
         height: auto;
@@ -278,7 +279,7 @@ body.itemid-136 {
 }
 
 @include media-breakpoint-up(md) {
-  body.itemid-136 {
+  body.view-featured {
     div#osrthorizon-position-3 {
       .mod-custom.custom {
         .banner-block {
@@ -360,7 +361,7 @@ body.itemid-136 {
 }
 
 @include media-breakpoint-up(xl) {
-  body.itemid-136 {
+  body.view-featured {
     div#osrthorizon-position-4 {
       ul.navbar-nav {
         li {
@@ -411,7 +412,7 @@ body.itemid-136 {
   }
 }
 @include media-breakpoint-up(xxl) {
-  body.itemid-136 {
+  body.view-featured {
     div#osrthorizon-position-4 {
       ul.navbar-nav {
         li {

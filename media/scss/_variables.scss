@@ -1,3 +1,4 @@
+// FIXME: Links at http://osrtandromeda.l/about-us#contact-us do not show $orange-color as they do in j3.
 
 /*Light gray background as on site footer.*/
 $gray-color: #b2b2b2;
@@ -51,3 +52,9 @@ $background-banner: #E6E6E6;
 $darkening-overlay-color: rgba(0,0,0,0.35);
 
 $default-content-font-size: 28px;
+
+// Standard variables for spacing:
+$horizontal-spacing: 25px;
+$horizontal-spacing-md: 25px;
+$horizontal-spacing-xl: 30px;
+$horizontal-spacing-xxl: 36px;

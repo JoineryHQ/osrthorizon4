@@ -1,0 +1,10 @@
+/* body.view-category is for Category pages (eg /about-us). */
+body.view-category {
+  .siteBody {
+    position: relative;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    max-width: revert;
+  }
+}

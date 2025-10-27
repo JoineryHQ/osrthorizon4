@@ -1,0 +1,15 @@
+/* Default styles for siteBody*/
+body .siteBody {
+  max-width: 1300px;
+  padding-top: 30px;
+  padding-bottom: 2rem;
+  // padding-left: see _alignment.scss
+  .page-header h2 {
+    font-family: "DIN2014-Demi", sans-serif;
+    font-size: 62px;
+    line-height: 70px;
+    color: $login-bg-color;
+    margin-right: 30px;
+    max-width: 900px;
+  }
+}

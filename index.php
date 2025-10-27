@@ -222,12 +222,16 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1.0');
     <div class="siteBody">
         <div class="container">
               <main>
-                <!-- message START -->
-                  <jdoc:include type="message" />
-                <!-- message END -->
-                <!-- component START -->
-                  <jdoc:include type="component" />
-                <!-- component END -->
+                <div class="siteBody-message">
+                  <!-- message START -->
+                    <jdoc:include type="message" />
+                  <!-- message END -->
+                </div>
+                <div class="siteBody-component">
+                  <!-- component START -->
+                    <jdoc:include type="component" />
+                  <!-- component END -->
+                </div>
               </main>
         </div>
     </div>
