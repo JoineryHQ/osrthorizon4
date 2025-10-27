@@ -79,12 +79,14 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
   <?php if (!empty($this->intro_items)) : ?>
     <?php foreach ($this->intro_items as $key => &$item) : ?>
-      <?php $rowcount = ((int) $key % (int) $this->columns) + 1; ?>
+      <?php 
+      $rowcount = $key - $leadingcount;
+      ?>
       <?php if ($rowcount === 1) : ?>
-        <?php $row = $counter / $this->columns; ?>
-        <div class="items-row cols-<?php echo (int) $this->columns; ?> <?php echo 'row-' . $row; ?> row-fluid clearfix">
+        <?php $row = $counter; ?>
+        <div class="items-row cols12 <?php echo 'row-' . $row; ?> row-fluid clearfix">
       <?php endif; ?>
-        <div class="span<?php echo round(12 / $this->columns); ?>">
+        <div class="span12">
           <div class="item column-<?php echo $rowcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>"
                itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
     <?php
@@ -95,9 +97,7 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
           <!-- end item -->
     <?php $counter++; ?>
         </div><!-- end span -->
-          <?php if (($rowcount == $this->columns) or ($counter == $introcount)) : ?>
         </div><!-- end row -->
-        <?php endif; ?>
     <?php endforeach; ?>
   <?php endif; ?>
 
@@ -114,7 +114,7 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
       <?php endif; ?>
       <?php echo $this->loadTemplate('children'); ?> </div>
     <?php endif; ?>
-    <?php if (($this->params->def('show_pagination', 1) == 1 || ($this->params->get('show_pagination') == 2)) && ($this->pagination->get('pages.total') > 1)) : ?>
+    <?php if (($this->params->def('show_pagination', 1) == 1 || ($this->params->get('show_pagination') == 2)) && ($this->pagination->pagesTotal > 1)) : ?>
     <div class="pagination">
     <?php if ($this->params->def('show_pagination_results', 1)) : ?>
         <p class="counter pull-right"> <?php echo $this->pagination->getPagesCounter(); ?> </p>
