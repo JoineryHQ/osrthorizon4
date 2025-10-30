@@ -9,6 +9,7 @@
  */
 
 defined('_JEXEC') or die;
+if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- START: osrthorizon/html/./layouts/chromes/superBasicMod.php -->';}
 
 use Joomla\Utilities\ArrayHelper;
 
@@ -65,3 +66,5 @@ $header = '<' . $headerTag . ' ' . ArrayHelper::toString($headerAttribs) . '>' .
     <?php // this line prints the actual contents of the module itself, such as the menu, the login form, the custom html, etc. ?>
     <?php echo $module->content; ?>
 </<?php echo $moduleTag; ?>>
+
+<?php if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- END: osrthorizon/html/./layouts/chromes/superBasicMod.php -->';}

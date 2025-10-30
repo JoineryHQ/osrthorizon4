@@ -11,6 +11,9 @@ defined('_JEXEC') or die;
 
 use Joomla\CMS\Filter\OutputFilter;
 use Joomla\CMS\HTML\HTMLHelper;
+use Joomla\CMS\Factory;
+
+if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- START: osrthorizon/html/./mod_menu/default_url.php -->';}
 
 $attributes = array();
 
@@ -69,3 +72,5 @@ elseif ($item->browserNav == 2)
 $attributes['class']= 'nav-link' . ' ' . htmlspecialchars($itemParams->get('menu-anchor_css', ''), ENT_COMPAT, 'UTF-8', false); 
 
 echo HTMLHelper::_('link', OutputFilter::ampReplace(htmlspecialchars($item->flink, ENT_COMPAT, 'UTF-8', false)), $linktype, $attributes);
+
+if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- END: osrthorizon/html/./mod_menu/default_url.php -->';}

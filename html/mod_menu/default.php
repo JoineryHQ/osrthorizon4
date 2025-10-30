@@ -10,6 +10,9 @@
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Helper\ModuleHelper;
+use Joomla\CMS\Factory;
+
+if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- START: osrthorizon/html/./mod_menu/default.php -->';}
 
 /** @var Joomla\CMS\WebAsset\WebAssetManager $wa */
 $wa = $app->getDocument()->getWebAssetManager();
@@ -108,3 +111,5 @@ if ($tagId = $params->get('tag_id', ''))
 	}
 }
 ?></ul>
+
+<?php if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- END: osrthorizon/html/./mod_menu/default.php -->';}

@@ -8,7 +8,7 @@
  */
 
 defined('_JEXEC') or die;
-if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- osrthorizon/html/./com_content/category/default_articles.php -->';}
+if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- START: osrthorizon/html/./com_content/category/default_articles.php -->';}
 
 use Joomla\CMS\Component\ComponentHelper;
 use Joomla\CMS\Language\Multilanguage;
@@ -145,3 +145,4 @@ $currentDate = JFactory::getDate()->format('Y-m-d H:i:s');
 	<?php endif; ?>
 <?php endif; ?>
 </form>
+<?php if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- END: osrthorizon/html/./com_content/category/custom.php -->';}

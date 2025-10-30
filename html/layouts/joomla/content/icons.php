@@ -18,7 +18,7 @@ use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Factory;
 
-if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- osrthorizon/html/./layouts/joomla/content/icons.php -->';}
+if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- START: osrthorizon/html/./layouts/joomla/content/icons.php -->';}
 
 $canEdit   = $displayData['params']->get('access-edit');
 $articleId = $displayData['item']->id;
@@ -32,4 +32,6 @@ $articleId = $displayData['item']->id;
             </div>
         </div>
     </div>
-<?php endif; ?>
+<?php endif;
+
+if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- END: osrthorizon/html/./layouts/joomla/content/icons.php -->';}

@@ -8,7 +8,7 @@
  */
 
 defined('_JEXEC') or die;
-if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- osrthorizon/html/./com_content/categories/default.php -->';}
+if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- START: osrthorizon/html/./com_content/categories/default.php -->';}
 
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 JHtml::_('behavior.core');
@@ -40,3 +40,4 @@ jQuery(function($) {
 		echo $this->loadTemplate('items');
 	?>
 </div>
+<?php if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- END: osrthorizon/html/./com_content/categories/default.php -->';}

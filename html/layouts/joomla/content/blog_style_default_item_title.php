@@ -19,7 +19,7 @@ use Joomla\CMS\Language\Text;
 use Joomla\CMS\Router\Route;
 use Joomla\Component\Content\Site\Helper\RouteHelper;
 
-if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- osrthorizon/html/./layouts/joomla/content/blog_style_default_item_title.php -->';}
+if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- START: osrthorizon/html/./layouts/joomla/content/blog_style_default_item_title.php -->';}
 
 // Create a shortcut for params.
 $params = $displayData->params;
@@ -65,4 +65,6 @@ require_once(JPATH_SITE . '/templates/osrthorizon/lib/utils.php');
     <?php endif; ?>
       
     </div>
-<?php endif; ?>
+<?php endif;
+
+if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- END: osrthorizon/html/./layouts/joomla/content/blog_style_default_item_title.php -->';}

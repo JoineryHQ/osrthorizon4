@@ -8,7 +8,7 @@
  */
 
 defined('_JEXEC') or die;
-if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- osrthorizon/html/./com_content/category/custom_children.php -->';}
+if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- START: osrthorizon/html/./com_content/category/default_children.php -->';}
 
 JHtml::_('bootstrap.tooltip');
 
@@ -16,17 +16,20 @@ $class  = ' class="first"';
 $lang   = JFactory::getLanguage();
 $user   = JFactory::getUser();
 $groups = $user->getAuthorisedViewLevels();
+?>
 
-if ($this->maxLevel != 0 && count($this->children[$this->category->id]) > 0) : ?>
+<?php if (count($this->children[$this->category->id]) > 0) : ?>
 
 	<?php foreach ($this->children[$this->category->id] as $id => $child) : ?>
 		<?php // Check whether category access level allows access to subcategories. ?>
 		<?php if (in_array($child->access, $groups)) : ?>
-			<?php if ($this->params->get('show_empty_categories') || $child->numitems || count($child->getChildren())) :
+			<?php
+			if ($this->params->get('show_empty_categories') || $child->getNumItems(true) || count($child->getChildren())) :
 				if (!isset($this->children[$this->category->id][$id + 1])) :
 					$class = ' class="last"';
 				endif;
 			?>
+
 			<div<?php echo $class; ?>>
 				<?php $class = ''; ?>
 				<?php if ($lang->isRtl()) : ?>
@@ -39,7 +42,7 @@ if ($this->maxLevel != 0 && count($this->children[$this->category->id]) > 0) : ?
 					<a href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($child->id)); ?>">
 					<?php echo $this->escape($child->title); ?></a>
 
-					<?php if ($this->maxLevel > 1 && count($child->getChildren()) > 0) : ?>
+					<?php if (count($child->getChildren()) > 0 && $this->maxLevel > 1) : ?>
 						<a href="#category-<?php echo $child->id; ?>" data-toggle="collapse" data-toggle="button" class="btn btn-mini pull-right" aria-label="<?php echo JText::_('JGLOBAL_EXPAND_CATEGORIES'); ?>"><span class="icon-plus" aria-hidden="true"></span></a>
 					<?php endif; ?>
 				</h3>
@@ -48,12 +51,11 @@ if ($this->maxLevel != 0 && count($this->children[$this->category->id]) > 0) : ?
 					<?php echo $this->escape($child->title); ?></a>
 					<?php if ( $this->params->get('show_cat_num_articles', 1)) : ?>
 						<span class="badge badge-info tip hasTooltip" title="<?php echo JHtml::_('tooltipText', 'COM_CONTENT_NUM_ITEMS_TIP'); ?>">
-							<?php echo JText::_('COM_CONTENT_NUM_ITEMS'); ?>&nbsp;
 							<?php echo $child->getNumItems(true); ?>
 						</span>
 					<?php endif; ?>
 
-					<?php if ($this->maxLevel > 1 && count($child->getChildren()) > 0) : ?>
+					<?php if (count($child->getChildren()) > 0 && $this->maxLevel > 1) : ?>
 						<a href="#category-<?php echo $child->id; ?>" data-toggle="collapse" data-toggle="button" class="btn btn-mini pull-right" aria-label="<?php echo JText::_('JGLOBAL_EXPAND_CATEGORIES'); ?>"><span class="icon-plus" aria-hidden="true"></span></a>
 					<?php endif; ?>
 				</h3>
@@ -67,10 +69,10 @@ if ($this->maxLevel != 0 && count($this->children[$this->category->id]) > 0) : ?
 					<?php endif; ?>
 				<?php endif; ?>
 
-				<?php if ($this->maxLevel > 1 && count($child->getChildren()) > 0) : ?>
+				<?php if (count($child->getChildren()) > 0 && $this->maxLevel > 1) : ?>
 					<div class="collapse fade" id="category-<?php echo $child->id; ?>">
 						<?php
-						$this->children[$child->id] = $child->getChildren();
+							$this->children[$child->id] = $child->getChildren();
 						$this->category = $child;
 						$this->maxLevel--;
 						echo $this->loadTemplate('children');
@@ -84,4 +86,6 @@ if ($this->maxLevel != 0 && count($this->children[$this->category->id]) > 0) : ?
 		<?php endif; ?>
 	<?php endforeach; ?>
 
-<?php endif;
+<?php endif; 
+if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- END: osrthorizon/html/./com_content/category/default_children.php -->';}
+

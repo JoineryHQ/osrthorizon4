@@ -8,7 +8,7 @@
  */
 
 defined('_JEXEC') or die;
-if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- osrthorizon/html/./com_content/category/blog_links.php -->';}
+if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- START: osrthorizon/html/./com_content/category/blog_links.php -->';}
 ?>
 
 <ol class="nav nav-tabs nav-stacked">
@@ -19,3 +19,4 @@ if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '
 		</li>
 	<?php endforeach; ?>
 </ol>
+<?php if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- END: osrthorizon/html/./com_content/category/blog_links.php -->';}

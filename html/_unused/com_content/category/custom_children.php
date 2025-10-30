@@ -8,7 +8,7 @@
  */
 
 defined('_JEXEC') or die;
-if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- osrthorizon/html/./com_content/category/blog_children.php -->';}
+if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- START: osrthorizon/html/./com_content/category/custom_children.php -->';}
 
 JHtml::_('bootstrap.tooltip');
 
@@ -85,3 +85,4 @@ if ($this->maxLevel != 0 && count($this->children[$this->category->id]) > 0) : ?
 	<?php endforeach; ?>
 
 <?php endif;
+if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- END: osrthorizon/html/./com_content/category/custom_children.php -->';}

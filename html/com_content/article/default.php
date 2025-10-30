@@ -8,7 +8,9 @@
  */
 
 defined('_JEXEC') or die;
-if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- osrthorizon/html/./com_content/article/default.php -->';}
+
+use Joomla\CMS\Factory;
+if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- START: osrthorizon/html/./com_content/article/default.php -->';}
 
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
@@ -16,19 +18,19 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 $params  = $this->item->params;
 $urls    = json_decode($this->item->urls);
 $canEdit = $params->get('access-edit');
-$user    = JFactory::getUser();
+$user    = Factory::getUser();
 $info    = $params->get('info_block_position', 0);
 
 // Check if associations are implemented. If they are, define the parameter.
 $assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associations'));
 
-$currentDate       = JFactory::getDate()->format('Y-m-d H:i:s');
+$currentDate       = Factory::getDate()->format('Y-m-d H:i:s');
 $isNotPublishedYet = $this->item->publish_up > $currentDate;
-$isExpired         = $this->item->publish_down < $currentDate && $this->item->publish_down !== JFactory::getDbo()->getNullDate();
+$isExpired         = $this->item->publish_down < $currentDate && $this->item->publish_down !== Factory::getDbo()->getNullDate();
 
 ?>
 <div class="item-page<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="https://schema.org/Article">
-	<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
+	<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? Factory::getConfig()->get('language') : $this->item->language; ?>" />
 
     <?php echo JLayoutHelper::render('joomla.content.full_image', $this->item); ?>
 
@@ -136,7 +138,7 @@ $isExpired         = $this->item->publish_down < $currentDate && $this->item->pu
 	<?php echo JHtml::_('content.prepare', $this->item->introtext); ?>
 	<?php // Optional link to let them register to see the whole article. ?>
 	<?php if ($params->get('show_readmore') && $this->item->fulltext != null) : ?>
-	<?php $menu = JFactory::getApplication()->getMenu(); ?>
+	<?php $menu = Factory::getApplication()->getMenu(); ?>
 	<?php $active = $menu->getActive(); ?>
 	<?php $itemId = $active->id; ?>
 	<?php $link = new JUri(JRoute::_('index.php?option=com_users&view=login&Itemid=' . $itemId, false)); ?>
@@ -162,3 +164,4 @@ $isExpired         = $this->item->publish_down < $currentDate && $this->item->pu
 	<?php endif; ?>
     </div>
 </div>
+<?php if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- END: osrthorizon/html/./com_content/article/default.php -->';}

@@ -8,7 +8,7 @@
  */
 
 defined('_JEXEC') or die;
-if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- osrthorizon/html/./com_content/category/default.php -->';}
+if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- START: osrthorizon/html/./com_content/category/default.php -->';}
 
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
@@ -21,3 +21,4 @@ echo JLayoutHelper::render('joomla.content.category_default', $this);
 ?>
 
 </div>
+<?php if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- END: osrthorizon/html/./com_content/category/default.php -->';}

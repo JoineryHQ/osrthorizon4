@@ -8,7 +8,7 @@
  */
 
 defined('_JEXEC') or die;
-if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- osrthorizon/html/./com_content/categories/default_items.php -->';}
+if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- START: osrthorizon/html/./com_content/categories/default_items.php -->';}
 
 JHtml::_('bootstrap.tooltip');
 
@@ -66,4 +66,6 @@ if ($this->maxLevelcat != 0 && count($this->items[$this->parent->id]) > 0) :
 		</div>
 		<?php endif; ?>
 	<?php endforeach; ?>
-<?php endif; ?>
+<?php endif; 
+if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- END: osrthorizon/html/./com_content/categories/default_items.php -->';}
+

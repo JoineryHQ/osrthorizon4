@@ -10,6 +10,9 @@
 defined('_JEXEC') or die;
 
 use Joomla\CMS\HTML\HTMLHelper;
+use Joomla\CMS\Factory;
+
+if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- START: osrthorizon/html/./mod_menu/default_separator.php -->';}
 
 $title      = $item->anchor_title ? ' title="' . $item->anchor_title . '"' : '';
 $anchor_css = $item->anchor_css ?: '';
@@ -35,3 +38,5 @@ if ($item->menu_image)
 
 ?>
 <span class="mod-menu__separator separator <?php echo $anchor_css; ?>"<?php echo $title; ?>><?php echo $linktype; ?></span>
+
+<?php if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- END: osrthorizon/html/./mod_menu/default_separator.php -->';}

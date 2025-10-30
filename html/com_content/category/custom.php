@@ -7,7 +7,9 @@
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 defined('_JEXEC') or die;
-if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- osrthorizon/html/./com_content/category/custom.php -->';}
+
+use Joomla\CMS\Factory;
+if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- START: osrthorizon/html/./com_content/category/custom.php -->';}
 
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
@@ -82,4 +84,4 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
     </div>
   </div>
 </div>
-<!-- END: osrthorizon/html/./com_content/category/custom.php -->
+<?php if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- END: osrthorizon/html/./com_content/category/custom.php -->';}

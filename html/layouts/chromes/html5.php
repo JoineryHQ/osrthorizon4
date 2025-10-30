@@ -12,6 +12,9 @@
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Factory;
+if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- START: osrthorizon/html/./layouts/chromes/html5.php -->';}
+
 use Joomla\Utilities\ArrayHelper;
 
 $module  = $displayData['module'];
@@ -67,4 +70,7 @@ if ($module->position == 'position-10') {
     <?php echo $osrtHorizonTitleWrapperEnd; ?>
     <?php echo $module->content; ?>
   </<?php echo $moduleTag; ?>>
-<?php echo $osrtHorizonModuleWrapperEnd; ?>
+<?php echo $osrtHorizonModuleWrapperEnd; 
+
+if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- END: osrthorizon/html/./layouts/chromes/html5.php -->';}
+

@@ -8,7 +8,9 @@
  */
 
 defined('_JEXEC') or die;
-if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- osrthorizon/html/./com_content/category/blog_item.php -->';}
+
+use Joomla\CMS\Factory;
+if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- START: osrthorizon/html/./com_content/category/blog_item.php -->';}
 
 // Create a shortcut for params.
 $params = $this->item->params;
@@ -19,9 +21,10 @@ $info    = $params->get('info_block_position', 0);
 // Check if associations are implemented. If they are, define the parameter.
 $assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associations'));
 
-$currentDate   = JFactory::getDate()->format('Y-m-d H:i:s');
+$currentDate   = Factory::getDate()->format('Y-m-d H:i:s');
+$currentDate   = Factory::getDate()->format('Y-m-d H:i:s');
 $isUnpublished = ($this->item->state == 0 || $this->item->publish_up > $currentDate)
-	|| ($this->item->publish_down < $currentDate && $this->item->publish_down !== JFactory::getDbo()->getNullDate());
+	|| ($this->item->publish_down < $currentDate && $this->item->publish_down !== Factory::getDbo()->getNullDate());
 
 $link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language));
 ?>
@@ -67,7 +70,7 @@ $link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->
     
 <?php if ($params->get('show_readmore') && $this->item->readmore) :
 	if (!$params->get('access-view')) :
-		$menu = JFactory::getApplication()->getMenu();
+		$menu = Factory::getApplication()->getMenu();
 		$active = $menu->getActive();
 		$itemId = $active->id;
 		$link = new JUri(JRoute::_('index.php?option=com_users&view=login&Itemid=' . $itemId, false));
@@ -80,7 +83,7 @@ $link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->
     <?php if ($params->get('access-view')) :
         $link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language));
     else :
-        $menu = JFactory::getApplication()->getMenu();
+        $menu = Factory::getApplication()->getMenu();
         $active = $menu->getActive();
         $itemId = $active->id;
         $link = new JUri(JRoute::_('index.php?option=com_users&view=login&Itemid=' . $itemId, false));
@@ -93,5 +96,7 @@ $link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->
 
 <?php if ($isUnpublished) : ?>
 	</div>
-<?php endif; ?>
+<?php endif; 
+if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- END: osrthorizon/html/./com_content/category/blog_item.php -->';}
+
 

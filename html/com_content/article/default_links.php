@@ -8,7 +8,9 @@
  */
 
 defined('_JEXEC') or die;
-if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- osrthorizon/html/./com_content/article/default_links.php -->';}
+
+use Joomla\CMS\Factory;
+if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- START: osrthorizon/html/./com_content/article/default_links.php -->';}
 
 // Create shortcut
 $urls = json_decode($this->item->urls);
@@ -77,4 +79,5 @@ if ($urls && (!empty($urls->urla) || !empty($urls->urlb) || !empty($urls->urlc))
 		<?php endforeach; ?>
 	</ul>
 </div>
-<?php endif; ?>
+<?php endif; 
+if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- END: osrthorizon/html/./com_content/article/default_links.php -->';}

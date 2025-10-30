@@ -8,7 +8,9 @@
  */
 
 defined('_JEXEC') or die;
-if (JFactory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- osrthorizon/html/./com_content/featured/default.php -->';}
+
+use Joomla\CMS\Factory;
+if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- START: osrthorizon/html/./com_content/featured/default.php -->';}
 
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
@@ -96,3 +98,5 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 <?php endif; ?>
 
 </div>
+
+<?php if (Factory::getApplication()->get('osrthorizon_enable_info_comments')) {echo '<!-- END: osrthorizon/html/./com_content/featured/default.php -->';}
