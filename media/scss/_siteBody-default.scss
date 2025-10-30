@@ -6,10 +6,38 @@ body .siteBody {
   // padding-left: see _alignment.scss
   .page-header h2 {
     font-family: "DIN2014-Demi", sans-serif;
-    font-size: 62px;
-    line-height: 70px;
+    font-size: 32px;
+    line-height: 42px;
     color: $login-bg-color;
     margin-right: 30px;
+    margin-bottom: 0px;
     max-width: 900px;
   }
 }
+
+
+@include media-breakpoint-up(md) {
+  body .siteBody {
+    .page-header h2 {
+      font-size: 43px;
+      line-height: 54px;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  body .siteBody {
+    .page-header h2 {
+      font-size: 56px;
+    }
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  body .siteBody {
+    .page-header h2 {
+      font-size: 62px;
+    }
+  }
+}
+

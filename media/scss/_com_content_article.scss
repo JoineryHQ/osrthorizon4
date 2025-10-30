@@ -1,0 +1,66 @@
+/* Styles for article content built with com_content/article/default.php
+*/
+div.com-content-article {
+  div.page-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    justify-content: space-between;
+    flex-direction: column;
+    dl.article-info.text-muted {
+      dt.article-info-term {
+        display: none;
+      }
+      dd.published {
+        span.icon-calendar {
+          display: none;
+        }
+        time {
+          font-family: "DIN2014-Demi", sans-serif;
+          font-size: 24px;
+          color: $pagination-color;
+          padding-top: 12px;
+          display: inline-block;
+          text-align: right;
+        }
+      }
+    }
+  }
+  div.page-header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  div.com-content-article {
+    div.page-header {
+      flex-direction: row;
+      dl.article-info.text-muted {
+        dd.published {
+          time {
+            font-size: 26px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  div.com-content-article {
+    div.page-header {
+      dl.article-info.text-muted {
+        dd.published {
+          time {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -11,18 +11,21 @@ body .siteBody {
 @include media-breakpoint-up(md) {
   body .siteBody {
     padding-left: $horizontal-spacing-md;
+    padding-right: $horizontal-spacing-md;
   }
 }
 
 @include media-breakpoint-up(xl) {
   body .siteBody {
     padding-left: $horizontal-spacing-xl;
+    padding-right: $horizontal-spacing-xl;
   }
 }
 
 @include media-breakpoint-up(xxl) {
   body .siteBody {
     padding-left: $horizontal-spacing-xxl;
+    padding-right: $horizontal-spacing-xxl;
   }
 }
 

@@ -12016,13 +12016,30 @@ body .siteBody {
 }
 body .siteBody .page-header h2, body .siteBody .page-header .h2 {
   font-family: "DIN2014-Demi", sans-serif;
-  font-size: 62px;
-  line-height: 70px;
+  font-size: 32px;
+  line-height: 42px;
   color: #FF5F00;
   margin-right: 30px;
+  margin-bottom: 0px;
   max-width: 900px;
 }
 
+@media (min-width: 768px) {
+  body .siteBody .page-header h2, body .siteBody .page-header .h2 {
+    font-size: 43px;
+    line-height: 54px;
+  }
+}
+@media (min-width: 1200px) {
+  body .siteBody .page-header h2, body .siteBody .page-header .h2 {
+    font-size: 56px;
+  }
+}
+@media (min-width: 1400px) {
+  body .siteBody .page-header h2, body .siteBody .page-header .h2 {
+    font-size: 62px;
+  }
+}
 /**
  * Site-wide styles.
  * NOTE: please take care to use this stylesheet ONLY to describe very narrow rules
@@ -12926,16 +12943,19 @@ body .siteBody {
 @media (min-width: 768px) {
   body .siteBody {
     padding-left: 25px;
+    padding-right: 25px;
   }
 }
 @media (min-width: 1200px) {
   body .siteBody {
     padding-left: 30px;
+    padding-right: 30px;
   }
 }
 @media (min-width: 1400px) {
   body .siteBody {
     padding-left: 36px;
+    padding-right: 36px;
   }
 }
 /**
@@ -13581,6 +13601,51 @@ body.view-category .siteBody {
   max-width: revert;
 }
 
+/* Styles for article content built with com_content/article/default.php
+*/
+div.com-content-article div.page-header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+div.com-content-article div.page-header dl.article-info.text-muted dt.article-info-term {
+  display: none;
+}
+div.com-content-article div.page-header dl.article-info.text-muted dd.published span.icon-calendar {
+  display: none;
+}
+div.com-content-article div.page-header dl.article-info.text-muted dd.published time {
+  font-family: "DIN2014-Demi", sans-serif;
+  font-size: 24px;
+  color: #aaa;
+  padding-top: 12px;
+  display: inline-block;
+  text-align: right;
+}
+div.com-content-article div.page-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  div.com-content-article div.page-header {
+    flex-direction: row;
+  }
+  div.com-content-article div.page-header dl.article-info.text-muted dd.published time {
+    font-size: 26px;
+  }
+}
+@media (min-width: 1200px) {
+  div.com-content-article div.page-header dl.article-info.text-muted dd.published time {
+    font-size: 28px;
+  }
+}
 .bannergroup.swiper {
   width: 100%;
   height: 100%;
