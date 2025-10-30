@@ -23,13 +23,16 @@ $currentDate   = JFactory::getDate()->format('Y-m-d H:i:s');
 $isUnpublished = ($this->item->state == 0 || $this->item->publish_up > $currentDate)
 	|| ($this->item->publish_down < $currentDate && $this->item->publish_down !== JFactory::getDbo()->getNullDate());
 
+$link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language));
 ?>
 <?php if ($isUnpublished) : ?>
 	<div class="system-unpublished">
 <?php endif; ?>
 
-<?php echo JLayoutHelper::render('joomla.content.intro_image', $this->item); ?>
-<?php echo JLayoutHelper::render('joomla.content.blog_style_default_item_title', $this->item); ?>
+<div class="osrthorizon-blog-title-image-wrapper">
+  <?php echo JLayoutHelper::render('joomla.content.intro_image', $this->item); ?>
+  <?php echo JLayoutHelper::render('joomla.content.blog_style_default_item_title', $this->item); ?>
+</div>
 
 <?php if ($canEdit || $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
 	<?php echo JLayoutHelper::render('joomla.content.icons', array('params' => $params, 'item' => $this->item, 'print' => false)); ?>
@@ -61,10 +64,9 @@ $isUnpublished = ($this->item->state == 0 || $this->item->publish_up > $currentD
 	<?php endif; ?>
 <?php endif; ?>
 
+    
 <?php if ($params->get('show_readmore') && $this->item->readmore) :
-	if ($params->get('access-view')) :
-		$link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language));
-	else :
+	if (!$params->get('access-view')) :
 		$menu = JFactory::getApplication()->getMenu();
 		$active = $menu->getActive();
 		$itemId = $active->id;

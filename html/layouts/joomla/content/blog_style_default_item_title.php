@@ -35,15 +35,15 @@ require_once(JPATH_SITE . '/templates/osrthorizon/lib/utils.php');
     <div class="page-header">
     <a class="section-header-link" name="<?= OsrthorizonUtils::normalizeSectionHeaderLink($displayData->title) ?>"></a>
         <?php if ($params->get('show_title')) : ?>
+          <a href="<?php echo Route::_($link); ?>" itemprop="url" id="<?= $slug ?>">
             <h2 itemprop="name">
                 <?php if ($params->get('link_titles') && ($params->get('access-view') || $params->get('show_noauth', '0') == '1')) : ?>
-                    <a href="<?php echo Route::_($link); ?>" itemprop="url" id="<?= $slug ?>">
                         <?php echo $this->escape($displayData->title); ?>
-                    </a>
                 <?php else : ?>
                     <?php echo $this->escape($displayData->title); ?>
                 <?php endif; ?>
             </h2>
+          </a>
         <?php endif; ?>
 
         <?php if ($displayData->state == 0) : ?>

@@ -1,0 +1,181 @@
+/**
+ * News main page.
+ */
+.blog-news.content-category-blog {
+  .category-desc {
+    font-size: 30px;
+    line-height: 36px;
+    color: $title-color;
+    margin-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+  .items-row {
+    margin-bottom: 25px;
+
+    .item {
+      position: relative;
+    }
+    .osrthorizon-blog-title-image-wrapper {
+      height: 350px;
+      background: $gray-color;
+      position: relative;
+      figure.item-image {
+        height: 100%;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      /* class .page-header is for actual page-level header, also for section haders. */
+      .page-header {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        a {
+          display: block;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          h2 {
+            color: $white-color;
+            padding-top: 60px;
+            font-size: 36px;
+            line-height: 44px;
+            padding-right: 10%;
+            margin-right: 0;
+            width: 100%;
+          }
+        }
+      }
+      .page-header::after {
+        display: none;
+      }
+    }
+    .osrthorizon-blog-title-image-wrapper::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 150px 150px;
+      border-color: transparent transparent $white-color transparent;
+    }
+    .readmore {
+      margin-top: 6px;
+      a.btn {
+        background: red;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        width: 350px;
+        height: 60px;
+        padding: 0 25px;
+        background-color: $login-bg-color;
+        font-family: 'DIN2014-Demi', sans-serif;
+        color: $white-color;
+        line-height: 39px;
+        font-size: 24px;
+
+        // Override certain bootstrap styles:
+        border: none;
+        border-radius: 0px;
+      }
+      a.btn::before {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(100%, -50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 60px 60px 0 0;
+        border-color: $login-bg-color transparent transparent transparent;
+      }
+    }
+  }
+}
+
+
+@include media-breakpoint-up(md) {
+  .blog-news.content-category-blog {
+    .items-row {
+      .osrthorizon-blog-title-image-wrapper {
+        /* class .page-header is for actual page-level header, also for section haders. */
+        .page-header {
+          a {
+            h2 {
+              font-size: 48px;
+              line-height: 55px;
+            }
+          }
+        }
+      }
+      .readmore {
+        a.btn {
+          width: 450px;
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .blog-news.content-category-blog {
+    .items-row {
+      .osrthorizon-blog-title-image-wrapper {
+        /* class .page-header is for actual page-level header, also for section haders. */
+        .page-header {
+          a {
+            h2 {
+              font-size: 70px;
+              line-height: 90px;
+            }
+          }
+        }
+      }
+      .readmore {
+        a.btn {
+          width: 450px;
+          font-size: 33px;
+          height: 72px;
+        }
+        a.btn::before {
+          border-width: 72px 72px 0 0;
+        }
+      }
+    }
+  }
+
+}
+
+@include media-breakpoint-up(xxl) {
+  .blog-news.content-category-blog {
+    .items-row {
+      .osrthorizon-blog-title-image-wrapper {
+        /* class .page-header is for actual page-level header, also for section haders. */
+        .page-header {
+          a {
+            h2 {
+              font-size: 87px;
+              line-height: 105px;
+            }
+          }
+        }
+      }
+      .readmore {
+        a.btn {
+          width: 550px;
+        }
+      }
+    }
+  }
+}

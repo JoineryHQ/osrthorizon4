@@ -10,8 +10,9 @@
   padding-right: $horizontal-spacing;
 }
 
-// From _blog.scss:
-.blog.content-category-custom {
+// From _blog-headers.scss:
+.blog.content-category-custom,
+.blog-news.content-category-blog {
   .page-header {
     .subheading-category {
       left: $horizontal-spacing;
@@ -92,12 +93,20 @@ body.view-category {
   }
 }
 
+// From _news.scss
+.blog-news.content-category-blog {
+  .category-desc {
+    padding-left: $horizontal-spacing;
+  }
+}
+
 
 @include media-breakpoint-up(md) {
   .container.main-content, .container.bottom-content {
     padding-left: $horizontal-spacing-md;
   }
-  .blog.content-category-custom {
+  .blog.content-category-custom,
+  .blog-news.content-category-blog {
     .page-header {
       .subheading-category {
         left: $horizontal-spacing-md;
@@ -162,7 +171,8 @@ body.view-category {
   .container.main-content, .container.bottom-content {
     padding-left: $horizontal-spacing-xl;
   }
-  .blog.content-category-custom {
+  .blog.content-category-custom,
+  .blog-news.content-category-blog {
     .page-header {
       .subheading-category {
         left: $horizontal-spacing-xl;
@@ -227,7 +237,8 @@ body.view-category {
   .container.main-content, .container.bottom-content {
     padding-left: $horizontal-spacing-xxl;
   }
-  .blog.content-category-custom {
+  .blog.content-category-custom,
+  .blog-news.content-category-blog {
     .page-header {
       .subheading-category {
         left: $horizontal-spacing-xxl;

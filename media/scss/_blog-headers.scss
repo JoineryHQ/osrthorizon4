@@ -1,0 +1,96 @@
+/**
+ * Category blog pages and News page.
+ */
+.blog.content-category-custom,
+.blog-news.content-category-blog {
+  > .page-header {
+    position: relative;
+    .subheading-category {
+      position: absolute;
+      font-weight: 700;
+      font-size: 50px;
+      max-width: 975px;
+      bottom: 20px;
+      z-index: 1;
+      color: #fff;      
+    }
+    .page-header-image {
+      height: 300px;
+      img {
+        height: 300px;
+        display: block;
+        width: 100%;
+        object-fit: cover;
+      }
+    }    
+    h2 {
+      margin: 0px;
+    }
+  }
+  /* class .page-header is for actual page-level header, also for section haders. */
+  .page-header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.1);
+  }
+  /* The actual category page header gets a darker overlay */
+  > .page-header::after {
+    background: rgba(0,0,0,0.35);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .blog.content-category-custom,
+  .blog-news.content-category-blog {
+    .page-header {
+      .subheading-category {
+        font-size: 60px;
+      }
+      .page-header-image {
+        height: 350px;
+        img {
+          height: 350px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .blog.content-category-custom,
+  .blog-news.content-category-blog {
+    .page-header {
+      .subheading-category {
+        font-size: 100px;
+      }
+      .page-header-image {
+        height: 450px;
+        img {
+          height: 450px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .blog.content-category-custom,
+  .blog-news.content-category-blog {
+    .page-header {
+      .subheading-category {
+        font-size: 170px;
+        line-height: 160px;
+      }
+      .page-header-image {
+        height: 450px;
+        img {
+          height: 450px;
+        }
+      }
+    }
+  }
+}
