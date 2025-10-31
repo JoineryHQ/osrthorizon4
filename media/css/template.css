@@ -13624,13 +13624,51 @@ div.com-content-article div.page-header dl.article-info.text-muted dd.published 
   display: inline-block;
   text-align: right;
 }
-div.com-content-article div.page-header::after {
+div.com-content-article nav.pagenavigation {
+  padding: 0 25px;
+}
+div.com-content-article nav.pagenavigation span.pagination {
+  justify-content: space-between;
+}
+div.com-content-article nav.pagenavigation a {
+  background-color: transparent;
+  color: #aaa;
+  font-size: 28px;
+  border: none;
+}
+div.com-content-article nav.pagenavigation a .icon-chevron-left, div.com-content-article nav.pagenavigation a .icon-chevron-right {
+  position: relative;
+}
+div.com-content-article nav.pagenavigation a .icon-chevron-left:before, div.com-content-article nav.pagenavigation a .icon-chevron-right:before {
+  display: inline-block;
+  position: relative;
+  border: solid 15px transparent;
   content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  top: 5px;
+}
+div.com-content-article nav.pagenavigation a span.icon-chevron-left::before {
+  border-right: solid 15px #aaa;
+  right: 12px;
+}
+div.com-content-article nav.pagenavigation a span.icon-chevron-right::before {
+  border-left: solid 15px #aaa;
+  left: 12px;
+}
+div.com-content-article nav.pagenavigation a.previous {
+  text-align: left;
+}
+div.com-content-article nav.pagenavigation a.next {
+  text-align: right;
+}
+div.com-content-article nav.pagenavigation a:hover, div.com-content-article nav.pagenavigation a:active, div.com-content-article nav.pagenavigation a.active {
+  background-color: #aaa;
+  color: #fff;
+}
+div.com-content-article nav.pagenavigation a:hover span.icon-chevron-left::before, div.com-content-article nav.pagenavigation a:active span.icon-chevron-left::before, div.com-content-article nav.pagenavigation a.active span.icon-chevron-left::before {
+  border-right-color: #fff;
+}
+div.com-content-article nav.pagenavigation a:hover span.icon-chevron-right::before, div.com-content-article nav.pagenavigation a:active span.icon-chevron-right::before, div.com-content-article nav.pagenavigation a.active span.icon-chevron-right::before {
+  border-left-color: #fff;
 }
 
 @media (min-width: 768px) {
