@@ -1,0 +1,14 @@
+/**
+ * class 'osrthorizon-error' appears in error.php html output.
+ * ALL STYLES specific to the error page belong in this file, including alignment (not in _alignment.scss)
+ */
+body.osrthorizon-error .siteBody {
+  max-width: revert;
+  div.osrthorizon-error {
+    text-align: center;
+    h2 {
+      max-width: revert;
+      margin-bottom: .5em;
+    }
+  }
+}

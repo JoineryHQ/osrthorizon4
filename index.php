@@ -126,21 +126,11 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1.0');
     <?php // Loads the site's CSS and JS files from web asset manager ?>
 	<jdoc:include type="styles" />
 	<jdoc:include type="scripts" />
-
-    <?php /** joomstarter comment: 
-     * You can put links to CSS/JS just like any regular HTML page here too, and remove the jdoc:include script/style lines above if you want.
-     * Do not delete the metas line though
-     * 
-     * For example, if you want to manually link to a custom stylesheet or script, you can do it like this:
-     * <link rel="stylesheet" href="https://mysite.com/templates/mytemplate/mycss.css" type="text/css" />
-     * <script src="https://mysite.com/templates/mytemplate/myscript.js"></script>
-     * */ 
-    ?>
-    
+   
 </head>
 
 <?php // you can change data-bs-theme to dark for dark mode  // ?>
-<body class="site <?php echo $pageclass; ?> <?php echo $option
+<body class="site <?php echo $pageclass; ?> <?php echo $osrthorizonErrorBodyClass; ?> <?php echo $option
 	. ' view-' . $view
 	. ($layout ? ' layout-' . $layout : ' no-layout')
 	. ($task ? ' task-' . $task : ' no-task')
@@ -222,16 +212,20 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1.0');
     <div class="siteBody">
         <div class="container">
               <main>
-                <div class="siteBody-message">
-                  <!-- message START -->
-                    <jdoc:include type="message" />
-                  <!-- message END -->
-                </div>
-                <div class="siteBody-component">
-                  <!-- component START -->
-                    <jdoc:include type="component" />
-                  <!-- component END -->
-                </div>
+                <?php if(!empty($osrthorizonErrorContentHtml)) : ?>
+                  <?php echo $osrthorizonErrorContentHtml; ?>
+                <?php else : ?>
+                  <div class="siteBody-message">
+                    <!-- message START -->
+                      <jdoc:include type="message" />
+                    <!-- message END -->
+                  </div>
+                  <div class="siteBody-component">
+                    <!-- component START -->
+                      <jdoc:include type="component" />
+                    <!-- component END -->
+                  </div>
+                <?php endif; ?>                
               </main>
         </div>
     </div>

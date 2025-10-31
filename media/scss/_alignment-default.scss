@@ -6,6 +6,7 @@
 // From _siteBody-default.scss:
 body .siteBody {
   padding-left: $horizontal-spacing;
+  padding-right: $horizontal-spacing;
 }
 
 @include media-breakpoint-up(md) {

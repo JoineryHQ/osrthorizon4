@@ -12938,6 +12938,7 @@ header.header .position-0 form.mod-login-logout div.logout-button button {
  */
 body .siteBody {
   padding-left: 25px;
+  padding-right: 25px;
 }
 
 @media (min-width: 768px) {
@@ -13794,6 +13795,21 @@ div.com-content-article nav.pagenavigation a:hover span.icon-chevron-right::befo
 /** Utility classes for special needs */
 .osrthorizon-bottom-margin {
   margin-bottom: 2em;
+}
+
+/**
+ * class 'osrthorizon-error' appears in error.php html output.
+ * ALL STYLES specific to the error page belong in this file, including alignment (not in _alignment.scss)
+ */
+body.osrthorizon-error .siteBody {
+  max-width: revert;
+}
+body.osrthorizon-error .siteBody div.osrthorizon-error {
+  text-align: center;
+}
+body.osrthorizon-error .siteBody div.osrthorizon-error h2, body.osrthorizon-error .siteBody div.osrthorizon-error .h2 {
+  max-width: revert;
+  margin-bottom: 0.5em;
 }
 
 p {
