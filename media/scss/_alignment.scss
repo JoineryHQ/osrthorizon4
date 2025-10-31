@@ -86,7 +86,7 @@ body.view-featured {
 }
 
 // From _view-category.scss
-body.view-category {
+body.com_content.view-category {
   .siteBody {
     // Default .siteBody has left padding, but we don't want it on view-category pages.
     padding-left: 0px;

@@ -155,11 +155,20 @@ header.header .burger.active {
           border: 4px solid #fff;
           border-left: 0;
           cursor: pointer;
-          // hack/quirk: setting height on the li is somehow necessary to allows
+          // OLD hack/quirk, removed:
+          // Original rationale: 
+          // "Setting height on the li is somehow necessary to allows
           // the containd <a> to fill all vertical space with "height: 100%";
           // since li,display is table-cell, this height is not actually applied
-          // to the li.
-          height: 1px;
+          // to the li.:
+          // Current status: 
+          // Setting li height: 1px causes the navigation menu to be clipped 
+          // vertically (only the top half of it shows) in Firefox. (no such effect
+          // in Chrome). Removing this height rule does not have appar to have 
+          // the negative effect described under "Original rational", therefore
+          // I'm removing it since it has no value and causes problems in FF.
+          // -- A.Shaw 2025-10-30
+          /*height: 1px;*/
           a {
             font-family: 'DIN2014', sans-serif;
             font-weight: 700;

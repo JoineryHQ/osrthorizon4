@@ -12246,7 +12246,7 @@ header.header .burger.active div:after {
     border: 4px solid #fff;
     border-left: 0;
     cursor: pointer;
-    height: 1px;
+    /*height: 1px;*/
   }
   .navigation .position-1 ul.navbar-nav li a {
     font-family: "DIN2014", sans-serif;
@@ -13006,7 +13006,7 @@ body.view-featured .siteBody .blog-featured .item-title a {
   padding-left: 25px;
 }
 
-body.view-category .siteBody {
+body.com_content.view-category .siteBody {
   padding-left: 0px;
 }
 
@@ -13597,7 +13597,7 @@ body.view-featured .siteBody .blog-featured .item-title a {
   }
 }
 /* body.view-category is for Category pages (eg /about-us). */
-body.view-category .siteBody {
+body.com_content.view-category .siteBody {
   position: relative;
   padding-top: 0px;
   padding-right: 0px;
@@ -13690,26 +13690,26 @@ div.com-content-article nav.pagenavigation a:hover span.icon-chevron-right::befo
 }
 /* Styles for Search page.
 */
-body.com_finder.view-search p, body.com_finder.view-search li {
+body.com_finder.view-search div.com-finder.finder p, body.com_finder.view-search div.com-finder.finder li {
   font-size: 28px;
   line-height: 34px;
   margin-bottom: 1.5em;
 }
-body.com_finder.view-search form.js-finder-searchform label {
+body.com_finder.view-search div.com-finder.finder form.js-finder-searchform label {
   font-size: 1.5em;
 }
-body.com_finder.view-search form.js-finder-searchform input#q {
+body.com_finder.view-search div.com-finder.finder form.js-finder-searchform input#q {
   font-size: 2em;
   margin-right: 0.5em;
 }
-body.com_finder.view-search form.js-finder-searchform button.btn {
+body.com_finder.view-search div.com-finder.finder form.js-finder-searchform button.btn {
   font-size: 22px;
 }
-body.com_finder.view-search form.js-finder-searchform button.btn-primary {
+body.com_finder.view-search div.com-finder.finder form.js-finder-searchform button.btn-primary {
   background-color: #FF5F00;
   border-color: #FF5F00;
 }
-body.com_finder.view-search div#search-results {
+body.com_finder.view-search div.com-finder.finder div#search-results {
   /*    ol#search-result-list {
         list-style-position: inside;
         padding-left: 0;
@@ -13719,28 +13719,44 @@ body.com_finder.view-search div#search-results {
         }
       }*/
 }
-body.com_finder.view-search div#search-results a, body.com_finder.view-search div#search-results a * {
+body.com_finder.view-search div.com-finder.finder div#search-results a, body.com_finder.view-search div.com-finder.finder div#search-results a * {
   color: #FF5F00;
 }
-body.com_finder.view-search div#search-results ol#search-result-list {
+body.com_finder.view-search div.com-finder.finder div#search-results ol#search-result-list {
   list-style: decimal;
   list-style-position: outside;
   padding-left: 1.5em;
 }
-body.com_finder.view-search div#search-results ol#search-result-list li.result__item p.result__title span.result__title-text {
+body.com_finder.view-search div.com-finder.finder div#search-results ol#search-result-list li.result__item p.result__title span.result__title-text {
   font-size: 32px;
 }
-body.com_finder.view-search div#search-results ol#search-result-list li.result__item p.result__description,
-body.com_finder.view-search div#search-results ol#search-result-list li.result__item ul.result__taxonomy li {
+body.com_finder.view-search div.com-finder.finder div#search-results ol#search-result-list li.result__item p.result__description,
+body.com_finder.view-search div.com-finder.finder div#search-results ol#search-result-list li.result__item ul.result__taxonomy li {
   font-size: 24px;
 }
-body.com_finder.view-search div#search-results ol#search-result-list li.result__item time.result__date {
+body.com_finder.view-search div.com-finder.finder div#search-results ol#search-result-list li.result__item time.result__date {
   color: #b2b2b2;
 }
-body.com_finder.view-search div#search-results ol#search-result-list li.result__item time.result__date::after {
+body.com_finder.view-search div.com-finder.finder div#search-results ol#search-result-list li.result__item time.result__date::after {
   content: "\a… ";
   white-space: pre;
   color: #333;
+}
+
+/* Styles for phocadownload pages.
+*/
+body.com_phocadownload div.siteBody-component div.pd-category div.ph-top {
+  display: none;
+}
+body.com_phocadownload div.siteBody-component div.pd-category div.pd-subcategory,
+body.com_phocadownload div.siteBody-component div.pd-category div.row {
+  font-size: 20px;
+}
+body.com_phocadownload div.siteBody-component div.pd-category div.pd-button-box-bt a {
+  background-color: #FF5F00;
+  border-color: #FF5F00;
+  color: #fff;
+  font-size: 20px;
 }
 
 .bannergroup.swiper {
