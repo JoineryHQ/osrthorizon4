@@ -12092,6 +12092,9 @@ body img {
   max-width: 100%;
   height: auto;
 }
+body p {
+  color: #333;
+}
 
 .navigation {
   display: none;
@@ -13685,6 +13688,61 @@ div.com-content-article nav.pagenavigation a:hover span.icon-chevron-right::befo
     font-size: 28px;
   }
 }
+/* Styles for Search page.
+*/
+body.com_finder.view-search p, body.com_finder.view-search li {
+  font-size: 28px;
+  line-height: 34px;
+  margin-bottom: 1.5em;
+}
+body.com_finder.view-search form.js-finder-searchform label {
+  font-size: 1.5em;
+}
+body.com_finder.view-search form.js-finder-searchform input#q {
+  font-size: 2em;
+  margin-right: 0.5em;
+}
+body.com_finder.view-search form.js-finder-searchform button.btn {
+  font-size: 22px;
+}
+body.com_finder.view-search form.js-finder-searchform button.btn-primary {
+  background-color: #FF5F00;
+  border-color: #FF5F00;
+}
+body.com_finder.view-search div#search-results {
+  /*    ol#search-result-list {
+        list-style-position: inside;
+        padding-left: 0;
+        li.result__item {
+          color: red;
+          list-style-type: decimal;
+        }
+      }*/
+}
+body.com_finder.view-search div#search-results a, body.com_finder.view-search div#search-results a * {
+  color: #FF5F00;
+}
+body.com_finder.view-search div#search-results ol#search-result-list {
+  list-style: decimal;
+  list-style-position: outside;
+  padding-left: 1.5em;
+}
+body.com_finder.view-search div#search-results ol#search-result-list li.result__item p.result__title span.result__title-text {
+  font-size: 32px;
+}
+body.com_finder.view-search div#search-results ol#search-result-list li.result__item p.result__description,
+body.com_finder.view-search div#search-results ol#search-result-list li.result__item ul.result__taxonomy li {
+  font-size: 24px;
+}
+body.com_finder.view-search div#search-results ol#search-result-list li.result__item time.result__date {
+  color: #b2b2b2;
+}
+body.com_finder.view-search div#search-results ol#search-result-list li.result__item time.result__date::after {
+  content: "\a… ";
+  white-space: pre;
+  color: #333;
+}
+
 .bannergroup.swiper {
   width: 100%;
   height: 100%;

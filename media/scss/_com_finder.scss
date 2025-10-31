@@ -1,0 +1,70 @@
+/* Styles for Search page.
+*/
+body.com_finder.view-search {
+  p, li {
+    font-size: $default-content-font-size;
+    line-height: 34px;
+    margin-bottom: 1.5em;
+  }
+  form.js-finder-searchform {
+    label {
+      font-size: 1.5em;
+    }
+    input#q {
+      font-size: 2em;
+      margin-right: .5em;
+    }
+    button.btn {
+      font-size: 22px;
+    }
+    button.btn-primary {
+      background-color: $btn-bg-color;
+      border-color: $btn-bg-color;
+    }
+  }
+
+  div#search-results {
+    a, a * {
+      color: $btn-bg-color;
+    }
+    /*    ol#search-result-list {
+          list-style-position: inside;
+          padding-left: 0;
+          li.result__item {
+            color: red;
+            list-style-type: decimal;
+          }
+        }*/
+
+
+        ol#search-result-list {
+          list-style: decimal;
+          list-style-position: outside;
+          padding-left: 1.5em;
+          li.result__item {
+            p.result__title span.result__title-text {
+              font-size: 32px;
+            }
+            p.result__description,
+            ul.result__taxonomy li {
+              font-size: 24px;
+            }
+            time.result__date {
+              color: $gray-color;
+            }
+            time.result__date::after {
+              content: "\A… ";
+              white-space: pre;
+              color: $dark-color;
+            }
+          }
+          
+        }
+  }
+}
+
+@include media-breakpoint-up(md) {
+}
+
+@include media-breakpoint-up(xl) {
+}
