@@ -13221,7 +13221,6 @@ body.view-featured div#osrthorizon-position-3 .mod-custom.custom .banner-block {
   flex-direction: column;
   justify-content: flex-start;
   background: rgba(0, 0, 0, 0.35);
-  color: #fff;
 }
 body.view-featured div#osrthorizon-position-3 .mod-custom.custom .banner-block .banner__title-home {
   font-size: 48px;
@@ -13232,6 +13231,9 @@ body.view-featured div#osrthorizon-position-3 .mod-custom.custom .banner-block .
   line-height: 48px;
   font-family: "DIN2014-Demi", sans-serif;
   max-width: 825px;
+}
+body.view-featured div#osrthorizon-position-3 .mod-custom.custom .banner-block * {
+  color: #fff;
 }
 body.view-featured div#osrthorizon-position-4 ul.navbar-nav {
   display: grid;
