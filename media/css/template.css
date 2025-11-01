@@ -13614,13 +13614,13 @@ div.com-content-article div.page-header {
   justify-content: space-between;
   flex-direction: column;
 }
-div.com-content-article div.page-header dl.article-info.text-muted dt.article-info-term {
+div.com-content-article dl.article-info.text-muted dt.article-info-term {
   display: none;
 }
-div.com-content-article div.page-header dl.article-info.text-muted dd.published span.icon-calendar {
+div.com-content-article dl.article-info.text-muted dd.published span.icon-calendar {
   display: none;
 }
-div.com-content-article div.page-header dl.article-info.text-muted dd.published time {
+div.com-content-article dl.article-info.text-muted dd.published time {
   font-family: "DIN2014-Demi", sans-serif;
   font-size: 24px;
   color: #aaa;

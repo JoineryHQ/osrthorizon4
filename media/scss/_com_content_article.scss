@@ -7,22 +7,22 @@ div.com-content-article {
     margin-bottom: 50px;
     justify-content: space-between;
     flex-direction: column;
-    dl.article-info.text-muted {
-      dt.article-info-term {
+  }
+  dl.article-info.text-muted {
+    dt.article-info-term {
+      display: none;
+    }
+    dd.published {
+      span.icon-calendar {
         display: none;
       }
-      dd.published {
-        span.icon-calendar {
-          display: none;
-        }
-        time {
-          font-family: "DIN2014-Demi", sans-serif;
-          font-size: 24px;
-          color: $pagination-color;
-          padding-top: 12px;
-          display: inline-block;
-          text-align: right;
-        }
+      time {
+        font-family: "DIN2014-Demi", sans-serif;
+        font-size: 24px;
+        color: $pagination-color;
+        padding-top: 12px;
+        display: inline-block;
+        text-align: right;
       }
     }
   }
