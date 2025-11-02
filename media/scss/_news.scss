@@ -7,7 +7,7 @@
     line-height: 36px;
     color: $title-color;
     margin-bottom: 50px;
-    padding-top: 30px;
+    padding-top: 2em;
     padding-bottom: 15px;
   }
   .items-row {
@@ -47,6 +47,7 @@
             padding-right: 10%;
             margin-right: 0;
             width: 100%;
+            max-width: revert;
           }
         }
       }
@@ -106,6 +107,10 @@
 
 @include media-breakpoint-up(md) {
   .blog-news.content-category-blog {
+    .category-desc {
+      font-size: 33px;
+      line-height: 48px;
+    }
     .items-row {
       .osrthorizon-blog-title-image-wrapper {
         /* class .page-header is for actual page-level header, also for section haders. */
@@ -159,6 +164,10 @@
 
 @include media-breakpoint-up(xxl) {
   .blog-news.content-category-blog {
+    .category-desc {
+      font-size: 54px;
+      line-height: 72px;
+    }
     .items-row {
       .osrthorizon-blog-title-image-wrapper {
         /* class .page-header is for actual page-level header, also for section haders. */
