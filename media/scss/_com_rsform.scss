@@ -1,0 +1,14 @@
+/* Styles for article content built with com_content/article/default.php
+*/
+body.com_rsform.view-rsform {
+  form.formResponsive {
+    label {
+      display: block;
+      float: left;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(xl) {}

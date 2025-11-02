@@ -13745,6 +13745,13 @@ body.com_finder.view-search div.com-finder.finder div#search-results ol#search-r
   color: #333;
 }
 
+/* Styles for article content built with com_content/article/default.php
+*/
+body.com_rsform.view-rsform form.formResponsive label {
+  display: block;
+  float: left;
+}
+
 /* Styles for phocadownload pages.
 */
 body.com_phocadownload div.siteBody-component div.pd-category div.ph-top {
