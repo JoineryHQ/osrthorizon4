@@ -13806,6 +13806,24 @@ body.com_phocadownload div.siteBody-component div.pd-category div.pd-button-box-
   margin-bottom: 6vw;
 }
 
+div.pagination {
+  justify-content: flex-end;
+}
+div.pagination .counter {
+  display: none;
+}
+div.pagination ul.pagination a {
+  border: none;
+  margin-right: 14px;
+  font-size: 28px;
+  color: #aaa;
+  padding: 0 0.25em;
+  background: none;
+}
+div.pagination ul.pagination li.active a {
+  color: #4D4D4D;
+}
+
 .main-content__top {
   position: relative;
   font-size: 28px;

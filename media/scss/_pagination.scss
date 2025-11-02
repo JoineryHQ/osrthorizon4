@@ -1,0 +1,21 @@
+div.pagination {
+  justify-content: flex-end;
+  .counter {
+    display: none;
+  }
+  ul.pagination {
+    a {
+      border: none;
+      margin-right: 14px;
+      font-size: 28px;
+      color: $pagination-color;
+      padding: 0 .25em;
+      background: none;
+    }
+    li.active {
+      a {
+        color: $title-color;
+      }
+    }
+  }
+}
