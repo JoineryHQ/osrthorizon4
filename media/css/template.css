@@ -12008,7 +12008,7 @@ textarea.form-control-lg {
 /*text color for "news" divider on home page*/
 /* gray background color, as on Memberships and Recognitions blocks on home-page */
 /* transparent black color to overlay page-title-banner images for improved readability */
-/* Styles for article content built with com_content/article/default.php
+/* site-wide styles for links to be displayed as buttons.
 */
 .osrthorizon-content-body p a, .osrthorizon-content-body li a,
 .content-category-custom .category-desc p a,
@@ -13934,6 +13934,74 @@ div.pagination ul.pagination li.active a {
   margin-bottom: 2em;
 }
 
+/* Custom styles for recognitions "Grant winners"
+ * Note heavy use of !important, because (for some reason) lots of inline styles are
+ * used in the html, and we want to override those.
+*/
+.custom-tabs {
+  position: relative !important;
+  background-color: rgba(255, 95, 0, 0.28) !important;
+  border-radius: 10px !important;
+  padding: 30px 30px 45px !important;
+  margin-top: 30px 0 20px !important;
+}
+.custom-tabs .hidden {
+  display: none;
+}
+.custom-tabs table {
+  position: absolute;
+  width: calc(100% - 8em) !important;
+  left: 7em;
+  top: 20px;
+  height: auto;
+}
+.custom-tabs table tr {
+  margin-top: 1em;
+  margin-top: 1em;
+}
+.custom-tabs table tr td {
+  border: none !important;
+  color: #333;
+  padding: 0 10px 0 0;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 24px;
+  padding-top: 0.25em;
+  padding-bottom: 0.5em;
+}
+.custom-tabs table tr td:first-child {
+  font-family: "DIN2014-Demi", sans-serif;
+}
+.custom-tabs h4, .custom-tabs .h4 {
+  margin: 0 !important;
+  color: #FF5F00;
+  font-size: 22px !important;
+  cursor: pointer !important;
+  font-family: "DIN2014-Demi", sans-serif;
+  font-weight: 700;
+}
+.custom-tabs h4.active, .custom-tabs .active.h4 {
+  color: #333 !important;
+}
+
+@media (min-width: 1200px) {
+  .custom-tabs table tr td {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .custom-tabs h4, .custom-tabs .h4 {
+    font-size: 28px !important;
+  }
+}
+@media (min-width: 1400px) {
+  .custom-tabs table {
+    width: calc(100% - 9em) !important;
+    left: 8em;
+  }
+  .custom-tabs h4, .custom-tabs .h4 {
+    font-size: 35px !important;
+  }
+}
 /**
  * class 'osrthorizon-error' appears in error.php html output.
  * ALL STYLES specific to the error page belong in this file, including alignment (not in _alignment.scss)

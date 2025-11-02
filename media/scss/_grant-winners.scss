@@ -1,0 +1,82 @@
+/* Custom styles for recognitions "Grant winners"
+ * Note heavy use of !important, because (for some reason) lots of inline styles are
+ * used in the html, and we want to override those.
+*/
+.custom-tabs {
+  position: relative !important;
+  background-color: rgba(255, 95, 0, 0.28) !important;
+  border-radius: 10px !important;
+  padding: 30px 30px 45px !important;
+  margin-top: 30px 0 20px !important;
+
+  .hidden {
+    display: none;
+  }
+  table {
+    position: absolute;
+    width: calc(100% - 8em) !important;
+    left: 7em;
+    top: 20px;
+    height: auto;
+    tr {
+      margin-top: 1em;
+      margin-top: 1em;
+      td {
+        border: none !important;
+        color: $dark-color;
+        padding: 0 10px 0 0;
+        vertical-align: top;
+        font-size: 16px;
+        line-height: 24px;
+        padding-top: .25em;
+        padding-bottom: .5em;
+      }
+      td:first-child {
+        font-family: 'DIN2014-Demi',sans-serif;
+      }
+    }
+  }
+  h4 {
+    margin: 0 !important;
+    color: $login-bg-color;
+    font-size: 22px !important;
+    cursor: pointer !important;
+    font-family: 'DIN2014-Demi',sans-serif;
+    font-weight: 700;
+  }
+  h4.active{
+    color: $dark-color !important;
+  }
+}
+@include media-breakpoint-up(xl) {
+  .custom-tabs {
+    table {
+      tr {
+        td {
+          font-size: 18px;
+          line-height: 28px;
+        }
+      }
+    }
+    h4 {
+      font-size: 28px !important;
+    }
+  }
+}
+@include media-breakpoint-up(xxl) {
+  .custom-tabs {
+    table {
+      width: calc(100% - 9em) !important;
+      left: 8em;
+      tr {
+        td {
+        }
+      }
+    }
+    h4 {
+      font-size: 35px !important;
+    }
+  }
+
+
+}
