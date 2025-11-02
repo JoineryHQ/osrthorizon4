@@ -12008,6 +12008,23 @@ textarea.form-control-lg {
 /*text color for "news" divider on home page*/
 /* gray background color, as on Memberships and Recognitions blocks on home-page */
 /* transparent black color to overlay page-title-banner images for improved readability */
+/* Styles for article content built with com_content/article/default.php
+*/
+.osrthorizon-content-body p a, .osrthorizon-content-body li a,
+.content-category-custom .category-desc p a,
+.content-category-custom .category-desc li a {
+  font-size: max(22.4px, 0.8em);
+  text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 15px;
+  color: #fff;
+  background-color: #FF5F00;
+  border-color: #FF5F00;
+  border-radius: 13px;
+}
+
 /* Default styles for siteBody*/
 body .siteBody {
   max-width: 1300px;
@@ -13146,18 +13163,6 @@ body.com_content.view-category .siteBody {
   font-size: 28px;
   line-height: 34px;
   margin-bottom: 1.5em;
-}
-.osrthorizon-content-body p a, .osrthorizon-content-body li a {
-  font-size: 22.4px;
-  text-decoration: underline;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 15px;
-  color: #fff;
-  background-color: #FF5F00;
-  border-color: #FF5F00;
-  border-radius: 13px;
 }
 .osrthorizon-content-body p iframe, .osrthorizon-content-body li iframe {
   max-width: 100%;

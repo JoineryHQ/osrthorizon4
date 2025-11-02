@@ -1,0 +1,22 @@
+/* Styles for article content built with com_content/article/default.php
+*/
+.osrthorizon-content-body,
+.content-category-custom .category-desc {
+  p,li {
+    a {
+      // Per existing html content, some links are wrapped in <span>s which force
+      // a 10px font-size, which is ridiculous. Force them to be .8em of the align-content: 
+      // surrounding text (which, per <p> rules above, is $default-content-font-size.)
+      font-size: max(($default-content-font-size * .8), .8em);      
+      text-decoration: underline;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px 15px;
+      color: $white-color;
+      background-color: $btn-bg-color;
+      border-color: $btn-bg-color;
+      border-radius: 13px;    
+    }
+  }
+}

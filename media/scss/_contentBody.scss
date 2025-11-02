@@ -7,21 +7,6 @@
     font-size: $default-content-font-size;
     line-height: 34px;
     margin-bottom: 1.5em;
-    a {
-      // Per existing html content, some links are wrapped in <span>s which force
-      // a 10px font-size, which is ridiculous. Force them to be .8em of the align-content: 
-      // surrounding text (which, per <p> rules above, is $default-content-font-size.)
-      font-size: ($default-content-font-size * .8);      
-      text-decoration: underline;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 5px 15px;
-      color: $white-color;
-      background-color: $btn-bg-color;
-      border-color: $btn-bg-color;
-      border-radius: 13px;    
-    }
     // Youtube videos embedded in content should never exceed container width.
     iframe {
       max-width: 100%;
