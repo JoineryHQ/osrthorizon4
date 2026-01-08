@@ -78,9 +78,9 @@ html {
   margin-top: 2em;
 }
 
-// Hide jmodedit and related (when admin user is logged in); they break the layout
+// Hide jmodedit (joomla edit tool-tips) and related (when admin user is logged in); they break the layout
 // and I don't want to mess with it.
-.jmodedit, div[role="tooltip"] {
+.jmodedit, div[role="tooltip"][id^="tip-"] {
   display: none !important;
 }
 .label-warning {

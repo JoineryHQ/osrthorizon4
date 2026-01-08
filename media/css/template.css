@@ -14046,7 +14046,7 @@ html {
   margin-top: 2em;
 }
 
-.jmodedit, div[role=tooltip] {
+.jmodedit, div[role=tooltip][id^=tip-] {
   display: none !important;
 }
 
