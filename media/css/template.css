@@ -12774,6 +12774,11 @@ header.header .position-0 form.mod-login-logout div.logout-button button {
 .blog .item p, .blog .item li {
   font-size: 28px;
   line-height: 34px;
+}
+.blog .item li {
+  margin: 0;
+}
+.blog .item p {
   margin: 15px 0;
 }
 .blog div.mod-contacts-list h4, .blog div.mod-contacts-list .h4, .blog div.mod-contacts-list p {

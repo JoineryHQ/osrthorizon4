@@ -205,6 +205,11 @@
   .item p, .item li {
     font-size: 28px;
     line-height: 34px;
+  }
+  .item li {
+    margin: 0;
+  }
+  .item p {
     margin: 15px 0;
   }
   // Styles for mod-contact-list (e.g. /about-us)
