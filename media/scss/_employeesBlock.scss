@@ -7,6 +7,10 @@ div.employees {
   justify-content: space-evenly;  
   gap: 80px 60px;
   margin: 50px 0 110px;
+  /* DEVELOPER NOTE: looking at this some months after it was written, I'm not
+   * sure if it's needed. I know there is a `div.employees.employees-block`, but I
+   * don't know if there's a `div.employees .employees-block`
+   */
   .employees-block {
     width: 170px;
     height: 170px;    
@@ -31,6 +35,16 @@ div.employees {
       }
     }
   }
+  p {
+    max-width: 180px;
+    img {
+      width: 100%;
+    }
+  }
+  span.osrt-past-president-image-caption {
+    /*display: block;*/
+  }
+  
 }
 @include media-breakpoint-up(md) {
   div.employees {
@@ -40,7 +54,11 @@ div.employees {
       .employees__text {
         font-size: 22px !important;
       }
-    }    
+    }
+    p {
+      max-width: 200px;
+    }
+
   }
 }
 @include media-breakpoint-up(xl) {
@@ -54,6 +72,9 @@ div.employees {
         margin-left: 20px !important;
       }
     }    
+    p {
+      max-width: 250px;
+    }
   }
 }
 @include media-breakpoint-up(xxl) {

@@ -13197,6 +13197,10 @@ div.employees {
   justify-content: space-evenly;
   gap: 80px 60px;
   margin: 50px 0 110px;
+  /* DEVELOPER NOTE: looking at this some months after it was written, I'm not
+   * sure if it's needed. I know there is a `div.employees.employees-block`, but I
+   * don't know if there's a `div.employees .employees-block`
+   */
 }
 div.employees .employees-block {
   width: 170px;
@@ -13222,6 +13226,15 @@ div.employees .employees-block .employees__text a {
   font-family: inherit;
   display: inherit;
 }
+div.employees p {
+  max-width: 180px;
+}
+div.employees p img {
+  width: 100%;
+}
+div.employees span.osrt-past-president-image-caption {
+  /*display: block;*/
+}
 
 @media (min-width: 768px) {
   div.employees .employees-block {
@@ -13230,6 +13243,9 @@ div.employees .employees-block .employees__text a {
   }
   div.employees .employees-block .employees__text {
     font-size: 22px !important;
+  }
+  div.employees p {
+    max-width: 200px;
   }
 }
 @media (min-width: 1200px) {
@@ -13241,6 +13257,9 @@ div.employees .employees-block .employees__text a {
     font-size: 24px !important;
     line-height: 29px;
     margin-left: 20px !important;
+  }
+  div.employees p {
+    max-width: 250px;
   }
 }
 /* Homepage is article 136. */
