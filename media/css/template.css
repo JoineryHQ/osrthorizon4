@@ -12506,6 +12506,7 @@ header.header .position-0 form.mod-login-logout div.logout-button button {
 }
 .blog.content-category-custom > .page-header .subheading-category,
 .blog-news.content-category-blog > .page-header .subheading-category {
+  font-family: "DIN2014", sans-serif;
   position: absolute;
   font-weight: 700;
   font-size: 50px;
