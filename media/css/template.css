@@ -13667,7 +13667,8 @@ div.com-content-article dl.article-info.text-muted dd.published time {
   text-align: right;
 }
 div.com-content-article nav.pagenavigation {
-  padding: 0 25px;
+  clear: both;
+  padding: 4em 25px 2em;
 }
 div.com-content-article nav.pagenavigation span.pagination {
   justify-content: space-between;
