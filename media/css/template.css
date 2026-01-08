@@ -12630,6 +12630,13 @@ header.header .position-0 form.mod-login-logout div.logout-button button {
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.1);
 }
+.blog.content-category-custom .category-desc p:first-of-type {
+  margin-bottom: 1em;
+  font-weight: 700;
+}
+.blog.content-category-custom .category-desc p:last-of-type {
+  font-weight: normal;
+}
 .blog.content-category-custom a.section-header-link {
   position: absolute;
   top: -50px;
@@ -12652,9 +12659,6 @@ header.header .position-0 form.mod-login-logout div.logout-button button {
 .blog.blog-proffesionals .main-content__left .page-header h2:before, .blog.blog-proffesionals .main-content__left .page-header .h2:before {
   background-color: rgba(247, 147, 30, 0.2);
 }
-.blog.blog-proffesionals .category-desc p:first-of-type {
-  color: #f7931e;
-}
 .blog.blog-proffesionals .block-stiky {
   border-color: #f7931e;
 }
@@ -12673,9 +12677,6 @@ header.header .position-0 form.mod-login-logout div.logout-button button {
 }
 .blog.blog-advocacy .main-content__left .page-header h2:before, .blog.blog-advocacy .main-content__left .page-header .h2:before {
   background-color: rgba(106, 191, 75, 0.2);
-}
-.blog.blog-advocacy .category-desc p:first-of-type {
-  color: #6abf4b;
 }
 .blog.blog-advocacy .block-stiky {
   border-color: #6abf4b;
@@ -12696,9 +12697,6 @@ header.header .position-0 form.mod-login-logout div.logout-button button {
 .blog.blog-education .main-content__left .page-header h2:before, .blog.blog-education .main-content__left .page-header .h2:before {
   background-color: rgba(60, 180, 229, 0.2);
 }
-.blog.blog-education .category-desc p:first-of-type {
-  color: #3cb4e5;
-}
 .blog.blog-education .block-stiky {
   border-color: #3cb4e5;
 }
@@ -12717,9 +12715,6 @@ header.header .position-0 form.mod-login-logout div.logout-button button {
 }
 .blog.blog-foundation .main-content__left .page-header h2:before, .blog.blog-foundation .main-content__left .page-header .h2:before {
   background-color: rgba(224, 204, 0, 0.2);
-}
-.blog.blog-foundation .category-desc p:first-of-type {
-  color: #E0CC00;
 }
 .blog.blog-foundation .block-stiky {
   border-color: #E0CC00;
