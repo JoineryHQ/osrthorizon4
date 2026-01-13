@@ -28,7 +28,7 @@ header.header {
 }
 
 // From _home.scss
-body.view-featured {
+body.com_content.view-featured {
   div#osrthorizon-position-3 {
     .mod-custom.custom {
       .banner-block {
@@ -130,7 +130,7 @@ body.com_content.view-category {
       left: $horizontal-spacing-md;
     }
   }
-  body.view-featured {
+  body.com_content.view-featured {
     div#osrthorizon-position-4 {
       ul.navbar-nav {
         li {
@@ -213,7 +213,7 @@ body.com_content.view-category {
       left: $horizontal-spacing-xl;
     }
   }
-  body.view-featured {
+  body.com_content.view-featured {
     div#osrthorizon-position-4 {
       ul.navbar-nav {
         li {
@@ -296,7 +296,7 @@ body.com_content.view-category {
       left: $horizontal-spacing-xxl;
     }
   }
-  body.view-featured {
+  body.com_content.view-featured {
     div#osrthorizon-position-4 {
       ul.navbar-nav {
         li {

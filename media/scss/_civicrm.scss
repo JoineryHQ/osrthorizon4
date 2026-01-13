@@ -1,0 +1,77 @@
+/**
+ * Civicrm pages.
+ */
+body.com_civicrm {
+  .siteBody {
+    max-width: revert;
+  }
+  div#crm-container,
+  div#crm-container.crm-public {
+    * {
+      font-size: 20px;
+    }
+
+    h1 {
+      font-family: "DIN2014-Demi", sans-serif;
+      font-size: 62px;
+      line-height: 70px;
+      color: $login-bg-color;
+      margin-right: 30px;
+      margin-bottom: 1em;
+    }
+
+    legend {
+      float: none;
+    }
+    .label {
+      display: inline-block;
+      padding: 16px 8px;
+      font-size: 10.998px;
+      font-weight: bold;
+      line-height: 14px;
+      vertical-align: baseline;
+      white-space: nowrap;
+      text-shadow: 0 -1px 0 rgb(0, 0, 0, 0.25);
+      background-color: $gray-color;
+      border-radius: 3px;
+      font-size: 15px;
+    }
+
+    div.form-item {
+      border-top-style: none;
+      margin: 0;
+      padding: 10px 0 5px 0;
+      clear: none;
+      height: 100%;
+    }
+    
+    .crm-button {
+      text-shadow: none;
+      /*padding: .25em;*/
+      
+      font-size: max(22.4px, .8em);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px 15px;
+      color: $white-color;
+      background-color: $login-bg-color;
+      border-color: $login-bg-color;
+      border-radius: 13px;      
+      
+      i {
+        margin: 0 5px;
+      }
+    }
+    .crm-button:hover {
+      background-color: $gray-color-menu;
+      border-color: $gray-color-menu;
+    }
+    
+    div#footer_text {
+      margin-top: 2em;
+      clear: both;      
+    }
+  }
+}

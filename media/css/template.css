@@ -12058,6 +12058,81 @@ body .siteBody .page-header h2, body .siteBody .page-header .h2 {
   }
 }
 /**
+ * Civicrm pages.
+ */
+body.com_civicrm .siteBody {
+  max-width: revert;
+}
+body.com_civicrm div#crm-container *,
+body.com_civicrm div#crm-container.crm-public * {
+  font-size: 20px;
+}
+body.com_civicrm div#crm-container h1, body.com_civicrm div#crm-container .h1,
+body.com_civicrm div#crm-container.crm-public h1 {
+  font-family: "DIN2014-Demi", sans-serif;
+  font-size: 62px;
+  line-height: 70px;
+  color: #FF5F00;
+  margin-right: 30px;
+  margin-bottom: 1em;
+}
+body.com_civicrm div#crm-container legend,
+body.com_civicrm div#crm-container.crm-public legend {
+  float: none;
+}
+body.com_civicrm div#crm-container .label,
+body.com_civicrm div#crm-container.crm-public .label {
+  display: inline-block;
+  padding: 16px 8px;
+  font-size: 10.998px;
+  font-weight: bold;
+  line-height: 14px;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #b2b2b2;
+  border-radius: 3px;
+  font-size: 15px;
+}
+body.com_civicrm div#crm-container div.form-item,
+body.com_civicrm div#crm-container.crm-public div.form-item {
+  border-top-style: none;
+  margin: 0;
+  padding: 10px 0 5px 0;
+  clear: none;
+  height: 100%;
+}
+body.com_civicrm div#crm-container .crm-button,
+body.com_civicrm div#crm-container.crm-public .crm-button {
+  text-shadow: none;
+  /*padding: .25em;*/
+  font-size: max(22.4px, 0.8em);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 15px;
+  color: #fff;
+  background-color: #FF5F00;
+  border-color: #FF5F00;
+  border-radius: 13px;
+}
+body.com_civicrm div#crm-container .crm-button i,
+body.com_civicrm div#crm-container.crm-public .crm-button i {
+  margin: 0 5px;
+}
+body.com_civicrm div#crm-container .crm-button:hover,
+body.com_civicrm div#crm-container.crm-public .crm-button:hover {
+  background-color: #808080;
+  border-color: #808080;
+}
+body.com_civicrm div#crm-container div#footer_text,
+body.com_civicrm div#crm-container.crm-public div#footer_text {
+  margin-top: 2em;
+  clear: both;
+}
+
+/**
  * Site-wide styles.
  * NOTE: please take care to use this stylesheet ONLY to describe very narrow rules
  * that are truly relevant site-wide.
@@ -13004,29 +13079,29 @@ header.header .header__left {
   left: 25px;
 }
 
-body.view-featured div#osrthorizon-position-3 .mod-custom.custom .banner-block {
+body.com_content.view-featured div#osrthorizon-position-3 .mod-custom.custom .banner-block {
   padding-left: 25px;
 }
-body.view-featured div#osrthorizon-position-4 ul.navbar-nav li a span.image-title {
+body.com_content.view-featured div#osrthorizon-position-4 ul.navbar-nav li a span.image-title {
   left: 25px;
 }
-body.view-featured div#osrthorizon-position-4 .mod-custom.custom {
+body.com_content.view-featured div#osrthorizon-position-4 .mod-custom.custom {
   padding-left: 25px;
   padding-right: 25px;
 }
-body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li h2.newsflash-title a, body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li .newsflash-title.h2 a {
+body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li h2.newsflash-title a, body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li .newsflash-title.h2 a {
   padding-left: 25px;
 }
-body.view-featured div#osrthorizon-position-5 .main-content__morenews {
+body.com_content.view-featured div#osrthorizon-position-5 .main-content__morenews {
   padding-left: 25px;
 }
-body.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom {
+body.com_content.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom {
   background-position-x: 25px;
 }
-body.view-featured .siteBody {
+body.com_content.view-featured .siteBody {
   padding-left: 0px;
 }
-body.view-featured .siteBody .blog-featured .item-title a {
+body.com_content.view-featured .siteBody .blog-featured .item-title a {
   padding-left: 25px;
 }
 
@@ -13053,23 +13128,23 @@ body.com_content.view-category .siteBody {
   header.header .header__left {
     left: 25px;
   }
-  body.view-featured div#osrthorizon-position-4 ul.navbar-nav li a span.image-title {
+  body.com_content.view-featured div#osrthorizon-position-4 ul.navbar-nav li a span.image-title {
     left: 25px;
   }
-  body.view-featured div#osrthorizon-position-4 .mod-custom.custom {
+  body.com_content.view-featured div#osrthorizon-position-4 .mod-custom.custom {
     padding-left: 25px;
     padding-right: 25px;
   }
-  body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li h2.newsflash-title a, body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li .newsflash-title.h2 a {
+  body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li h2.newsflash-title a, body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li .newsflash-title.h2 a {
     padding-left: 25px;
   }
-  body.view-featured div#osrthorizon-position-5 .main-content__morenews {
+  body.com_content.view-featured div#osrthorizon-position-5 .main-content__morenews {
     padding-left: 25px;
   }
-  body.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom {
+  body.com_content.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom {
     background-position-x: 25px;
   }
-  body.view-featured .siteBody .blog-featured .item-title a {
+  body.com_content.view-featured .siteBody .blog-featured .item-title a {
     padding-left: 25px;
   }
   .blog-news.content-category-blog .category-desc {
@@ -13091,23 +13166,23 @@ body.com_content.view-category .siteBody {
   header.header .header__left {
     left: 30px;
   }
-  body.view-featured div#osrthorizon-position-4 ul.navbar-nav li a span.image-title {
+  body.com_content.view-featured div#osrthorizon-position-4 ul.navbar-nav li a span.image-title {
     left: 30px;
   }
-  body.view-featured div#osrthorizon-position-4 .mod-custom.custom {
+  body.com_content.view-featured div#osrthorizon-position-4 .mod-custom.custom {
     padding-left: 30px;
     padding-right: 30px;
   }
-  body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li h2.newsflash-title a, body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li .newsflash-title.h2 a {
+  body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li h2.newsflash-title a, body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li .newsflash-title.h2 a {
     padding-left: 30px;
   }
-  body.view-featured div#osrthorizon-position-5 .main-content__morenews {
+  body.com_content.view-featured div#osrthorizon-position-5 .main-content__morenews {
     padding-left: 30px;
   }
-  body.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom {
+  body.com_content.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom {
     background-position-x: 30px;
   }
-  body.view-featured .siteBody .blog-featured .item-title a {
+  body.com_content.view-featured .siteBody .blog-featured .item-title a {
     padding-left: 30px;
   }
   .blog-news.content-category-blog .category-desc {
@@ -13129,23 +13204,23 @@ body.com_content.view-category .siteBody {
   header.header .header__left {
     left: 36px;
   }
-  body.view-featured div#osrthorizon-position-4 ul.navbar-nav li a span.image-title {
+  body.com_content.view-featured div#osrthorizon-position-4 ul.navbar-nav li a span.image-title {
     left: 36px;
   }
-  body.view-featured div#osrthorizon-position-4 .mod-custom.custom {
+  body.com_content.view-featured div#osrthorizon-position-4 .mod-custom.custom {
     padding-left: 36px;
     padding-right: 36px;
   }
-  body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li h2.newsflash-title a, body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li .newsflash-title.h2 a {
+  body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li h2.newsflash-title a, body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li .newsflash-title.h2 a {
     padding-left: 36px;
   }
-  body.view-featured div#osrthorizon-position-5 .main-content__morenews {
+  body.com_content.view-featured div#osrthorizon-position-5 .main-content__morenews {
     padding-left: 36px;
   }
-  body.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom {
+  body.com_content.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom {
     background-position-x: 36px;
   }
-  body.view-featured .siteBody .blog-featured .item-title a {
+  body.com_content.view-featured .siteBody .blog-featured .item-title a {
     padding-left: 36px;
   }
   .blog-news.content-category-blog .category-desc {
@@ -13263,12 +13338,12 @@ div.employees span.osrt-past-president-image-caption {
   }
 }
 /* Homepage is article 136. */
-body.view-featured div#osrthorizon-position-3 .mod-custom.custom {
+body.com_content.view-featured div#osrthorizon-position-3 .mod-custom.custom {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-body.view-featured div#osrthorizon-position-3 .mod-custom.custom .banner-block {
+body.com_content.view-featured div#osrthorizon-position-3 .mod-custom.custom .banner-block {
   min-height: 450px;
   padding-top: 100px;
   padding-right: 35px;
@@ -13278,31 +13353,31 @@ body.view-featured div#osrthorizon-position-3 .mod-custom.custom .banner-block {
   justify-content: flex-start;
   background: rgba(0, 0, 0, 0.35);
 }
-body.view-featured div#osrthorizon-position-3 .mod-custom.custom .banner-block .banner__title-home {
+body.com_content.view-featured div#osrthorizon-position-3 .mod-custom.custom .banner-block .banner__title-home {
   font-size: 48px;
   font-weight: 700;
 }
-body.view-featured div#osrthorizon-position-3 .mod-custom.custom .banner-block .banner__description {
+body.com_content.view-featured div#osrthorizon-position-3 .mod-custom.custom .banner-block .banner__description {
   font-size: 36px;
   line-height: 48px;
   font-family: "DIN2014-Demi", sans-serif;
   max-width: 825px;
 }
-body.view-featured div#osrthorizon-position-3 .mod-custom.custom .banner-block * {
+body.com_content.view-featured div#osrthorizon-position-3 .mod-custom.custom .banner-block * {
   color: #fff;
 }
-body.view-featured div#osrthorizon-position-4 ul.navbar-nav {
+body.com_content.view-featured div#osrthorizon-position-4 ul.navbar-nav {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   position: relative;
   margin-bottom: 60px;
 }
-body.view-featured div#osrthorizon-position-4 ul.navbar-nav li {
+body.com_content.view-featured div#osrthorizon-position-4 ul.navbar-nav li {
   grid-column: span 2;
   height: 284px;
   position: relative;
 }
-body.view-featured div#osrthorizon-position-4 ul.navbar-nav li a {
+body.com_content.view-featured div#osrthorizon-position-4 ul.navbar-nav li a {
   font-family: "DIN2014-Demi", sans-serif;
   font-size: 50px;
   color: #fff;
@@ -13310,13 +13385,13 @@ body.view-featured div#osrthorizon-position-4 ul.navbar-nav li a {
   display: block;
   padding: 0px;
 }
-body.view-featured div#osrthorizon-position-4 ul.navbar-nav li a img {
+body.com_content.view-featured div#osrthorizon-position-4 ul.navbar-nav li a img {
   object-fit: cover;
   width: 100%;
   height: 284px;
   display: block;
 }
-body.view-featured div#osrthorizon-position-4 ul.navbar-nav li a span.image-title {
+body.com_content.view-featured div#osrthorizon-position-4 ul.navbar-nav li a span.image-title {
   font-size: 32px;
   line-height: 36px;
   position: absolute;
@@ -13325,7 +13400,7 @@ body.view-featured div#osrthorizon-position-4 ul.navbar-nav li a span.image-titl
   color: #fff;
   z-index: 2;
 }
-body.view-featured div#osrthorizon-position-4 ul.navbar-nav li a::after {
+body.com_content.view-featured div#osrthorizon-position-4 ul.navbar-nav li a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -13333,19 +13408,19 @@ body.view-featured div#osrthorizon-position-4 ul.navbar-nav li a::after {
   width: 100%;
   height: 100%;
 }
-body.view-featured div#osrthorizon-position-4 ul.navbar-nav li a.orange::after {
+body.com_content.view-featured div#osrthorizon-position-4 ul.navbar-nav li a.orange::after {
   background-color: rgba(247, 147, 30, 0.5);
 }
-body.view-featured div#osrthorizon-position-4 ul.navbar-nav li a.green::after {
+body.com_content.view-featured div#osrthorizon-position-4 ul.navbar-nav li a.green::after {
   background-color: rgba(106, 191, 75, 0.5);
 }
-body.view-featured div#osrthorizon-position-4 ul.navbar-nav li a.blue::after {
+body.com_content.view-featured div#osrthorizon-position-4 ul.navbar-nav li a.blue::after {
   background-color: rgba(60, 180, 229, 0.5);
 }
-body.view-featured div#osrthorizon-position-4 ul.navbar-nav li a.yellow::after {
+body.com_content.view-featured div#osrthorizon-position-4 ul.navbar-nav li a.yellow::after {
   background-color: rgba(224, 204, 0, 0.5);
 }
-body.view-featured div#osrthorizon-position-4 ul.navbar-nav::after {
+body.com_content.view-featured div#osrthorizon-position-4 ul.navbar-nav::after {
   content: "";
   display: inline-block;
   width: 0;
@@ -13358,18 +13433,18 @@ body.view-featured div#osrthorizon-position-4 ul.navbar-nav::after {
   left: 50%;
   bottom: 0;
 }
-body.view-featured div#osrthorizon-position-4 .mod-custom.custom {
+body.com_content.view-featured div#osrthorizon-position-4 .mod-custom.custom {
   padding-top: 80px;
   /* padding-left: see _alignment.scss */
   /* padding-right: see _alignment.scss */
   padding-bottom: 15px;
 }
-body.view-featured div#osrthorizon-position-4 .mod-custom.custom p {
+body.com_content.view-featured div#osrthorizon-position-4 .mod-custom.custom p {
   font-size: 28px;
   line-height: 40px;
   color: #4D4D4D;
 }
-body.view-featured div#osrthorizon-position-4 .mod-custom.custom p a {
+body.com_content.view-featured div#osrthorizon-position-4 .mod-custom.custom p a {
   font-family: "DIN2014-Demi", sans-serif;
   display: inline-flex;
   align-items: center;
@@ -13382,11 +13457,11 @@ body.view-featured div#osrthorizon-position-4 .mod-custom.custom p a {
   font-size: 24px;
   border-radius: 12px;
 }
-body.view-featured div#osrthorizon-position-5 .moduletable.-test-news {
+body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news {
   margin-top: 60px;
   margin-bottom: 35px;
 }
-body.view-featured div#osrthorizon-position-5 .moduletable.-test-news .home-news__title {
+body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news .home-news__title {
   text-align: center;
   text-transform: uppercase;
   font-family: "DIN2014-Demi", sans-serif;
@@ -13395,7 +13470,7 @@ body.view-featured div#osrthorizon-position-5 .moduletable.-test-news .home-news
   overflow: hidden;
   margin-bottom: 20px;
 }
-body.view-featured div#osrthorizon-position-5 .moduletable.-test-news .home-news__title::before, body.view-featured div#osrthorizon-position-5 .moduletable.-test-news .home-news__title::after {
+body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news .home-news__title::before, body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news .home-news__title::after {
   content: "";
   display: inline-block;
   position: relative;
@@ -13405,31 +13480,31 @@ body.view-featured div#osrthorizon-position-5 .moduletable.-test-news .home-news
   vertical-align: middle;
   background: #B3B3B3;
 }
-body.view-featured div#osrthorizon-position-5 .moduletable.-test-news .home-news__title::before {
+body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news .home-news__title::before {
   left: -25px;
   margin-left: -50%;
 }
-body.view-featured div#osrthorizon-position-5 .moduletable.-test-news .home-news__title::after {
+body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news .home-news__title::after {
   left: 25px;
   margin-right: -50%;
 }
-body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz {
+body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz {
   grid-template-columns: repeat(4, 1fr) !important;
   gap: 30px;
   display: grid;
 }
-body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li {
+body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li {
   grid-column: 2 span;
   position: relative;
   height: 260px;
   background: #b2b2b2;
 }
-body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li h2.newsflash-title, body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li .newsflash-title.h2 {
+body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li h2.newsflash-title, body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li .newsflash-title.h2 {
   position: absolute;
   height: 100%;
   width: 100%;
 }
-body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li h2.newsflash-title a, body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li .newsflash-title.h2 a {
+body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li h2.newsflash-title a, body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li .newsflash-title.h2 a {
   font-family: "DIN2014-Demi", sans-serif;
   color: #fff;
   display: inline-block;
@@ -13439,11 +13514,11 @@ body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsfla
   padding-right: 10%;
   font-size: 32px;
 }
-body.view-featured div#osrthorizon-position-5 .main-content__morenews {
+body.com_content.view-featured div#osrthorizon-position-5 .main-content__morenews {
   padding-top: 0px;
   margin: 35px 0px;
 }
-body.view-featured div#osrthorizon-position-5 .main-content__morenews a {
+body.com_content.view-featured div#osrthorizon-position-5 .main-content__morenews a {
   font-size: 24px;
   border-radius: 12px;
   font-family: "DIN2014-Demi", sans-serif;
@@ -13456,18 +13531,18 @@ body.view-featured div#osrthorizon-position-5 .main-content__morenews a {
   height: 70px;
   width: 240px;
 }
-body.view-featured div#osrthorizon-position-7 {
+body.com_content.view-featured div#osrthorizon-position-7 {
   margin-bottom: 25px;
   grid-template-columns: 1fr;
   grid-row-gap: 20px;
   display: grid;
   grid-column-gap: 10px;
 }
-body.view-featured div#osrthorizon-position-7 .home-members-block {
+body.com_content.view-featured div#osrthorizon-position-7 .home-members-block {
   background-color: #E6E6E6;
   position: relative;
 }
-body.view-featured div#osrthorizon-position-7 .home-members-block h3, body.view-featured div#osrthorizon-position-7 .home-members-block .h3 {
+body.com_content.view-featured div#osrthorizon-position-7 .home-members-block h3, body.com_content.view-featured div#osrthorizon-position-7 .home-members-block .h3 {
   font-family: "DIN2014-Demi", sans-serif;
   color: #4D4D4D;
   position: absolute;
@@ -13477,7 +13552,7 @@ body.view-featured div#osrthorizon-position-7 .home-members-block h3, body.view-
   left: 36%;
   margin-left: 30px;
 }
-body.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom {
+body.com_content.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom {
   height: 200px;
   background-size: 115px;
   background-position-y: center;
@@ -13486,7 +13561,7 @@ body.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom {
   padding-right: 11px;
   padding-bottom: 0px;
 }
-body.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom a {
+body.com_content.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom a {
   position: absolute;
   right: 11px;
   bottom: 0;
@@ -13505,21 +13580,21 @@ body.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom a 
   height: 45px;
   width: 130px;
 }
-body.view-featured .siteBody {
+body.com_content.view-featured .siteBody {
   position: relative;
   padding-top: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
   max-width: revert;
 }
-body.view-featured .siteBody .blog-featured {
+body.com_content.view-featured .siteBody .blog-featured {
   margin-bottom: 25px;
 }
-body.view-featured .siteBody .blog-featured img {
+body.com_content.view-featured .siteBody .blog-featured img {
   width: 100%;
   height: auto;
 }
-body.view-featured .siteBody .blog-featured .item-title a {
+body.com_content.view-featured .siteBody .blog-featured .item-title a {
   padding-top: 65px;
   font-size: 56px;
   line-height: 60px;
@@ -13531,125 +13606,125 @@ body.view-featured .siteBody .blog-featured .item-title a {
 }
 
 @media (min-width: 768px) {
-  body.view-featured div#osrthorizon-position-3 .mod-custom.custom .banner-block .banner__title-home {
+  body.com_content.view-featured div#osrthorizon-position-3 .mod-custom.custom .banner-block .banner__title-home {
     font-size: 62px;
   }
-  body.view-featured div#osrthorizon-position-3 .mod-custom.custom .banner-block .banner__description {
+  body.com_content.view-featured div#osrthorizon-position-3 .mod-custom.custom .banner-block .banner__description {
     font-size: 50px;
     line-height: 60px;
   }
-  body.view-featured div#osrthorizon-position-4 ul.navbar-nav li a span.image-title {
+  body.com_content.view-featured div#osrthorizon-position-4 ul.navbar-nav li a span.image-title {
     font-size: 36px;
   }
-  body.view-featured div#osrthorizon-position-4 .mod-custom.custom p {
+  body.com_content.view-featured div#osrthorizon-position-4 .mod-custom.custom p {
     font-size: 33px;
     line-height: 48px;
   }
-  body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li h2.newsflash-title a, body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li .newsflash-title.h2 a {
+  body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li h2.newsflash-title a, body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li .newsflash-title.h2 a {
     font-size: 42px;
   }
-  body.view-featured div#osrthorizon-position-5 .main-content__morenews {
+  body.com_content.view-featured div#osrthorizon-position-5 .main-content__morenews {
     padding-top: 0px;
     margin: 35px 0px;
   }
-  body.view-featured div#osrthorizon-position-5 .main-content__morenews a {
+  body.com_content.view-featured div#osrthorizon-position-5 .main-content__morenews a {
     font-size: 28px;
     border-radius: 15px;
   }
-  body.view-featured div#osrthorizon-position-7 .home-members-block h3, body.view-featured div#osrthorizon-position-7 .home-members-block .h3 {
+  body.com_content.view-featured div#osrthorizon-position-7 .home-members-block h3, body.com_content.view-featured div#osrthorizon-position-7 .home-members-block .h3 {
     font-size: 30px;
   }
-  body.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom {
+  body.com_content.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom {
     height: 275px;
   }
-  body.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom a {
+  body.com_content.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom a {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     font-size: 30px;
     width: 154px;
     height: 50px;
   }
-  body.view-featured .siteBody .blog-featured .item-title a {
+  body.com_content.view-featured .siteBody .blog-featured .item-title a {
     padding-top: 70px;
     font-size: 70px;
     line-height: 100px;
   }
 }
 @media (min-width: 1200px) {
-  body.view-featured div#osrthorizon-position-4 ul.navbar-nav li a span.image-title {
+  body.com_content.view-featured div#osrthorizon-position-4 ul.navbar-nav li a span.image-title {
     font-size: 42px;
     line-height: 50px;
   }
-  body.view-featured div#osrthorizon-position-4 .mod-custom.custom p {
+  body.com_content.view-featured div#osrthorizon-position-4 .mod-custom.custom p {
     font-size: 42px;
     line-height: 50px;
   }
-  body.view-featured div#osrthorizon-position-7 {
+  body.com_content.view-featured div#osrthorizon-position-7 {
     margin-bottom: 50px;
   }
-  body.view-featured div#osrthorizon-position-7 .home-members-block h3, body.view-featured div#osrthorizon-position-7 .home-members-block .h3 {
+  body.com_content.view-featured div#osrthorizon-position-7 .home-members-block h3, body.com_content.view-featured div#osrthorizon-position-7 .home-members-block .h3 {
     font-size: 42px;
     left: 27%;
     margin-left: 50px;
   }
-  body.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom {
+  body.com_content.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom {
     background-size: auto;
   }
-  body.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom a {
+  body.com_content.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom a {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     font-size: 30px;
     width: 154px;
     height: 50px;
   }
-  body.view-featured .siteBody .blog-featured .item-title a {
+  body.com_content.view-featured .siteBody .blog-featured .item-title a {
     padding-top: 110px;
     font-size: 100px;
     line-height: 130px;
   }
 }
 @media (min-width: 1400px) {
-  body.view-featured div#osrthorizon-position-4 ul.navbar-nav li {
+  body.com_content.view-featured div#osrthorizon-position-4 ul.navbar-nav li {
     grid-column: span 1;
   }
-  body.view-featured div#osrthorizon-position-4 .mod-custom.custom p {
+  body.com_content.view-featured div#osrthorizon-position-4 .mod-custom.custom p {
     font-size: 62px;
     line-height: 75px;
     max-width: 1300px;
   }
-  body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz {
+  body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz {
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 29px 54px;
   }
-  body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li {
+  body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li {
     grid-column: revert;
   }
-  body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li h2.newsflash-title a, body.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li .newsflash-title.h2 a {
+  body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li h2.newsflash-title a, body.com_content.view-featured div#osrthorizon-position-5 .moduletable.-test-news ul.newsflash-horiz li .newsflash-title.h2 a {
     font-size: 42px;
   }
-  body.view-featured div#osrthorizon-position-7 {
+  body.com_content.view-featured div#osrthorizon-position-7 {
     margin-bottom: 50px;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 10px;
   }
-  body.view-featured div#osrthorizon-position-7 .home-members-block h3, body.view-featured div#osrthorizon-position-7 .home-members-block .h3 {
+  body.com_content.view-featured div#osrthorizon-position-7 .home-members-block h3, body.com_content.view-featured div#osrthorizon-position-7 .home-members-block .h3 {
     font-size: 50px;
     left: 50%;
   }
-  body.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom {
+  body.com_content.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom {
     background-size: auto;
   }
-  body.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom a {
+  body.com_content.view-featured div#osrthorizon-position-7 .home-members-block .mod-custom a {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     font-size: 30px;
     width: 154px;
     height: 50px;
   }
-  body.view-featured .siteBody .blog-featured {
+  body.com_content.view-featured .siteBody .blog-featured {
     margin-bottom: 50px;
   }
-  body.view-featured .siteBody .blog-featured .item-title a {
+  body.com_content.view-featured .siteBody .blog-featured .item-title a {
     font-size: 130px;
     line-height: 188px;
   }
