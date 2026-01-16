@@ -6,12 +6,14 @@
   p, li {
     font-size: $default-content-font-size;
     line-height: 34px;
-    margin-bottom: 1.5em;
     // Youtube videos embedded in content should never exceed container width.
     iframe {
       max-width: 100%;
     }
   }  
+  p {
+    margin-bottom: 1.5em;    
+  }
   ul {
     list-style: outside disc;
   }

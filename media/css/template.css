@@ -13238,10 +13238,12 @@ body.com_content.view-category .siteBody {
 .osrthorizon-content-body p, .osrthorizon-content-body li {
   font-size: 28px;
   line-height: 34px;
-  margin-bottom: 1.5em;
 }
 .osrthorizon-content-body p iframe, .osrthorizon-content-body li iframe {
   max-width: 100%;
+}
+.osrthorizon-content-body p {
+  margin-bottom: 1.5em;
 }
 .osrthorizon-content-body ul {
   list-style: outside disc;
